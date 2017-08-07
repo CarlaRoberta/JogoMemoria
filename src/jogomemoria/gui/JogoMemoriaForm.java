@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package jogomemoria.gui;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -117,7 +118,7 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                         .addComponent(jm5)
                         .addGap(18, 18, 18)
                         .addComponent(jm3)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
