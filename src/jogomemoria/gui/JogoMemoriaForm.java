@@ -47,37 +47,37 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm1.png"))); // NOI18N
+        jm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm2.jpg"))); // NOI18N
+        jm2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm3.jpg"))); // NOI18N
+        jm3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm4.jpg"))); // NOI18N
+        jm4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm5.jpg"))); // NOI18N
+        jm5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm6.jpg"))); // NOI18N
+        jm6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm7.png"))); // NOI18N
+        jm7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm8.jpg"))); // NOI18N
+        jm8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm5.jpg"))); // NOI18N
+        jm9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm1.png"))); // NOI18N
+        jm10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm2.jpg"))); // NOI18N
+        jm11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm7.png"))); // NOI18N
+        jm12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm8.jpg"))); // NOI18N
+        jm13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm4.jpg"))); // NOI18N
+        jm14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm3.jpg"))); // NOI18N
+        jm15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/Jm6.jpg"))); // NOI18N
+        jm16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,7 +148,7 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                     .addComponent(jm13)
                     .addComponent(jm15)
                     .addComponent(jm16))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();

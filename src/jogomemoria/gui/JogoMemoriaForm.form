@@ -100,7 +100,7 @@
                   <Component id="jm15" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jm16" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,112 +109,112 @@
     <Component class="javax.swing.JLabel" name="jm1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm1.png"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm2.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm3.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm4.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm5.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm6.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm7">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm7.png"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm8">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm8.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm9">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm5.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm10">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm1.png"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm11">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm2.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm12">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm7.png"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm13">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/jm8.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm14">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm4.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm15">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm3.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jm16">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/jogomemoria/gui/img/Jm6.jpg"/>
+          <Image iconType="3" name="/jogomemoria/gui/img/interroga&#xe7;&#xe3;o.jpg"/>
         </Property>
       </Properties>
     </Component>
