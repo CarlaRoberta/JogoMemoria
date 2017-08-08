@@ -118,12 +118,12 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                         .addComponent(jm5)
                         .addGap(18, 18, 18)
                         .addComponent(jm3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jm3)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -148,7 +148,7 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                     .addComponent(jm13)
                     .addComponent(jm15)
                     .addComponent(jm16))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
