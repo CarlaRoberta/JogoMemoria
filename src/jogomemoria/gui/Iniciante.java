@@ -10,12 +10,12 @@ import javax.swing.ImageIcon;
  *
  * @author Aluno
  */
-public class JogoMemoriaForm extends javax.swing.JFrame {
+public class Iniciante extends javax.swing.JFrame {
 
     /**
      * Creates new form JogoMemoriaForm
      */
-    public JogoMemoriaForm() {
+    public Iniciante() {
         initComponents();
     }
 
@@ -118,7 +118,7 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                         .addComponent(jm5)
                         .addGap(18, 18, 18)
                         .addComponent(jm3)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,20 +171,21 @@ public class JogoMemoriaForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Iniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Iniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Iniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JogoMemoriaForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Iniciante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JogoMemoriaForm().setVisible(true);
+                new Iniciante().setVisible(true);
             }
         });
     }
