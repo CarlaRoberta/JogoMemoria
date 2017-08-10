@@ -28,56 +28,56 @@ public class Iniciante extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jm1 = new javax.swing.JLabel();
-        jm2 = new javax.swing.JLabel();
-        jm3 = new javax.swing.JLabel();
-        jm4 = new javax.swing.JLabel();
-        jm5 = new javax.swing.JLabel();
-        jm6 = new javax.swing.JLabel();
-        jm7 = new javax.swing.JLabel();
-        jm8 = new javax.swing.JLabel();
-        jm9 = new javax.swing.JLabel();
-        jm10 = new javax.swing.JLabel();
-        jm11 = new javax.swing.JLabel();
-        jm12 = new javax.swing.JLabel();
-        jm13 = new javax.swing.JLabel();
-        jm14 = new javax.swing.JLabel();
-        jm15 = new javax.swing.JLabel();
-        jm16 = new javax.swing.JLabel();
+        jq1 = new javax.swing.JLabel();
+        jq2 = new javax.swing.JLabel();
+        jq3 = new javax.swing.JLabel();
+        jq4 = new javax.swing.JLabel();
+        jq5 = new javax.swing.JLabel();
+        jq6 = new javax.swing.JLabel();
+        jq7 = new javax.swing.JLabel();
+        jq8 = new javax.swing.JLabel();
+        jq9 = new javax.swing.JLabel();
+        jq10 = new javax.swing.JLabel();
+        jq11 = new javax.swing.JLabel();
+        jq12 = new javax.swing.JLabel();
+        jq13 = new javax.swing.JLabel();
+        jq14 = new javax.swing.JLabel();
+        jq15 = new javax.swing.JLabel();
+        jq16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jm16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,37 +87,37 @@ public class Iniciante extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jm13)
+                        .addComponent(jq13)
                         .addGap(18, 18, 18)
-                        .addComponent(jm14)
+                        .addComponent(jq14)
                         .addGap(18, 18, 18)
-                        .addComponent(jm15)
+                        .addComponent(jq15)
                         .addGap(18, 18, 18)
-                        .addComponent(jm16))
+                        .addComponent(jq16))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jm9)
+                        .addComponent(jq9)
                         .addGap(18, 18, 18)
-                        .addComponent(jm10)
+                        .addComponent(jq10)
                         .addGap(18, 18, 18)
-                        .addComponent(jm11)
+                        .addComponent(jq11)
                         .addGap(18, 18, 18)
-                        .addComponent(jm12))
+                        .addComponent(jq12))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jm2)
+                        .addComponent(jq2)
                         .addGap(18, 18, 18)
-                        .addComponent(jm6)
+                        .addComponent(jq6)
                         .addGap(18, 18, 18)
-                        .addComponent(jm7)
+                        .addComponent(jq7)
                         .addGap(18, 18, 18)
-                        .addComponent(jm8))
+                        .addComponent(jq8))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jm1)
+                        .addComponent(jq1)
                         .addGap(18, 18, 18)
-                        .addComponent(jm4)
+                        .addComponent(jq4)
                         .addGap(18, 18, 18)
-                        .addComponent(jm5)
+                        .addComponent(jq5)
                         .addGap(18, 18, 18)
-                        .addComponent(jm3)))
+                        .addComponent(jq3)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -125,29 +125,29 @@ public class Iniciante extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jm3)
+                    .addComponent(jq3)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jm1)
-                        .addComponent(jm4)
-                        .addComponent(jm5)))
+                        .addComponent(jq1)
+                        .addComponent(jq4)
+                        .addComponent(jq5)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jm6)
-                    .addComponent(jm2)
-                    .addComponent(jm7)
-                    .addComponent(jm8))
+                    .addComponent(jq6)
+                    .addComponent(jq2)
+                    .addComponent(jq7)
+                    .addComponent(jq8))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jm10)
-                    .addComponent(jm9)
-                    .addComponent(jm11)
-                    .addComponent(jm12))
+                    .addComponent(jq10)
+                    .addComponent(jq9)
+                    .addComponent(jq11)
+                    .addComponent(jq12))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jm14)
-                    .addComponent(jm13)
-                    .addComponent(jm15)
-                    .addComponent(jm16))
+                    .addComponent(jq14)
+                    .addComponent(jq13)
+                    .addComponent(jq15)
+                    .addComponent(jq16))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -191,21 +191,21 @@ public class Iniciante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jm1;
-    private javax.swing.JLabel jm10;
-    private javax.swing.JLabel jm11;
-    private javax.swing.JLabel jm12;
-    private javax.swing.JLabel jm13;
-    private javax.swing.JLabel jm14;
-    private javax.swing.JLabel jm15;
-    private javax.swing.JLabel jm16;
-    private javax.swing.JLabel jm2;
-    private javax.swing.JLabel jm3;
-    private javax.swing.JLabel jm4;
-    private javax.swing.JLabel jm5;
-    private javax.swing.JLabel jm6;
-    private javax.swing.JLabel jm7;
-    private javax.swing.JLabel jm8;
-    private javax.swing.JLabel jm9;
+    private javax.swing.JLabel jq1;
+    private javax.swing.JLabel jq10;
+    private javax.swing.JLabel jq11;
+    private javax.swing.JLabel jq12;
+    private javax.swing.JLabel jq13;
+    private javax.swing.JLabel jq14;
+    private javax.swing.JLabel jq15;
+    private javax.swing.JLabel jq16;
+    private javax.swing.JLabel jq2;
+    private javax.swing.JLabel jq3;
+    private javax.swing.JLabel jq4;
+    private javax.swing.JLabel jq5;
+    private javax.swing.JLabel jq6;
+    private javax.swing.JLabel jq7;
+    private javax.swing.JLabel jq8;
+    private javax.swing.JLabel jq9;
     // End of variables declaration//GEN-END:variables
 }

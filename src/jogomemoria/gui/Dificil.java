@@ -27,8 +27,8 @@ public class Dificil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jq1 = new javax.swing.JLabel();
+        jq2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -84,9 +84,9 @@ public class Dificil extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        jq2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
 
@@ -197,7 +197,7 @@ public class Dificil extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel48)
@@ -213,7 +213,7 @@ public class Dificil extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel31)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel1))
+                                .addComponent(jq1))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -221,7 +221,7 @@ public class Dificil extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel34))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
+                                        .addComponent(jq2)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel33))
                                     .addGroup(layout.createSequentialGroup()
@@ -319,15 +319,15 @@ public class Dificil extends javax.swing.JFrame {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel54)
                                         .addComponent(jLabel46)))))
-                        .addContainerGap(94, Short.MAX_VALUE))))
+                        .addContainerGap(104, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel1)
+                    .addComponent(jq1)
                     .addComponent(jLabel13)
                     .addComponent(jLabel19)
                     .addComponent(jLabel15)
@@ -392,7 +392,7 @@ public class Dificil extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(12, 12, 12)
-                                .addComponent(jLabel2)
+                                .addComponent(jq2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
@@ -405,7 +405,7 @@ public class Dificil extends javax.swing.JFrame {
                                         .addComponent(jLabel4)))))
                         .addGap(126, 126, 126)
                         .addComponent(jLabel12)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -427,7 +427,7 @@ public class Dificil extends javax.swing.JFrame {
                                 .addComponent(jLabel52))
                             .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addComponent(jLabel51))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -469,7 +469,6 @@ public class Dificil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -480,7 +479,6 @@ public class Dificil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -523,5 +521,7 @@ public class Dificil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jq1;
+    private javax.swing.JLabel jq2;
     // End of variables declaration//GEN-END:variables
 }
