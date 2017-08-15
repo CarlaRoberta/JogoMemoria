@@ -104,7 +104,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                                 .addComponent(lbl_Tempo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(150, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnl_PrincipalLayout.createSequentialGroup()
                         .addComponent(lbl_nivel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -127,7 +127,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                     .addComponent(rbt_Iniciante)
                     .addComponent(rbt_Intermediario)
                     .addComponent(rbt_Dificil))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(pnl_Principal);
@@ -163,7 +163,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 .addComponent(lbl_titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_subtitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(lbl_imagem)
                 .addGap(29, 29, 29))
         );
@@ -175,17 +175,17 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
+    private void rbt_IntermediarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_IntermediarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_IniciarActionPerformed
+    }//GEN-LAST:event_rbt_IntermediarioActionPerformed
 
     private void rbt_InicianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_InicianteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rbt_InicianteActionPerformed
 
-    private void rbt_IntermediarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_IntermediarioActionPerformed
+    private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbt_IntermediarioActionPerformed
+    }//GEN-LAST:event_btn_IniciarActionPerformed
 
     /**
      * @param args the command line arguments
