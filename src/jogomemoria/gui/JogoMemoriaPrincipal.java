@@ -78,7 +78,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 .addComponent(lbl_Tempo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -95,7 +95,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                     .addComponent(btn_Iniciar)
                     .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         spp_painel.setLeftComponent(pnl_Principal);
@@ -116,7 +116,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         jogoLayout.setHorizontalGroup(
             jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jogoLayout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addComponent(lbl_titulo)
                 .addGap(84, 84, 84))
             .addGroup(jogoLayout.createSequentialGroup()
@@ -135,7 +135,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 .addComponent(lbl_subtitulo)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jogo.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jogo.setLayer(lbl_subtitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -149,7 +149,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         );
         pnl_principal2Layout.setVerticalGroup(
             pnl_principal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_principal2Layout.createSequentialGroup()
+            .addGroup(pnl_principal2Layout.createSequentialGroup()
                 .addComponent(jogo)
                 .addContainerGap())
         );
@@ -169,11 +169,11 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         }
         if(op.equals("Intermediario")) {
             spp_painel.setRightComponent(jpi);
-            this.setSize(800,800);
+            this.setSize(750,750);
         }
         if(op.equals("Dificil")) {
             spp_painel.setRightComponent(jpd);
-            this.setSize(900,900);
+            this.setSize(670,1050);
             
         }
         this.repaint();
@@ -204,6 +204,14 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(JogoMemoriaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
