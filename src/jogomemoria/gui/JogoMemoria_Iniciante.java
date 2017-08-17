@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -50,15 +50,6 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         lbl_img1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl_img1MouseClicked(evt);
-            }
-        });
-        lbl_img1.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                lbl_img1AncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
 
@@ -166,17 +157,10 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    String [] imagename = {"Jm1.png"};
     
-    private void lbl_img1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lbl_img1AncestorAdded
-      
-    }//GEN-LAST:event_lbl_img1AncestorAdded
-
     private void lbl_img1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_img1MouseClicked
-       ImageIcon[] image = new ImageIcon[8];
-       int i= 0;
-       image [i]= new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.png"));
-       
+       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.png"));
+       lbl_img1.setIcon(image);
     }//GEN-LAST:event_lbl_img1MouseClicked
 
 

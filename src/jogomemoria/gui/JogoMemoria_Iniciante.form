@@ -116,7 +116,6 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbl_img1MouseClicked"/>
-        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="lbl_img1AncestorAdded"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbl_img2">
