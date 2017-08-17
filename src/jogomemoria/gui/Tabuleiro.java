@@ -5,6 +5,8 @@
  */
 package jogomemoria.gui;
 
+import javax.swing.JSplitPane;
+
 /**
  *
  * @author Aluno
@@ -27,19 +29,24 @@ public class Tabuleiro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        sppTabuleiro = new javax.swing.JSplitPane();
         jogoMemoria_Iniciante1 = new jogomemoria.gui.JogoMemoria_Iniciante();
+        infos1 = new jogomemoria.gui.Infos();
 
         setLayout(new java.awt.BorderLayout());
 
-        jSplitPane1.setTopComponent(jogoMemoria_Iniciante1);
+        sppTabuleiro.setTopComponent(jogoMemoria_Iniciante1);
+        sppTabuleiro.setRightComponent(infos1);
 
-        add(jSplitPane1, java.awt.BorderLayout.CENTER);
+        add(sppTabuleiro, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-
+    public JSplitPane getsppTabuleiro(){
+        return sppTabuleiro;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JSplitPane jSplitPane1;
+    private jogomemoria.gui.Infos infos1;
     private jogomemoria.gui.JogoMemoria_Iniciante jogoMemoria_Iniciante1;
+    private javax.swing.JSplitPane sppTabuleiro;
     // End of variables declaration//GEN-END:variables
 }

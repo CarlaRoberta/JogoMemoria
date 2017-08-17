@@ -165,7 +165,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         String op=(String) cmb_niveis.getSelectedItem();
         if(op.equals("Facil")) {
             spp_painel.setRightComponent(jpf);
-            this.setSize(600,600);
+            this.setSize(650,600);
         }
         if(op.equals("Intermediario")) {
             spp_painel.setRightComponent(jpi);
