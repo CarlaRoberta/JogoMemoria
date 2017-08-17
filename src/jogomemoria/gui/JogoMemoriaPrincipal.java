@@ -39,9 +39,10 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         rbt_Intermediario = new javax.swing.JRadioButton();
         rbt_Dificil = new javax.swing.JRadioButton();
         pnl_principal2 = new javax.swing.JPanel();
-        lbl_imagem = new javax.swing.JLabel();
-        lbl_titulo = new javax.swing.JLabel();
+        jogo = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
         lbl_subtitulo = new javax.swing.JLabel();
+        lbl_titulo = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -132,40 +133,58 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(pnl_Principal);
 
-        lbl_imagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.png"))); // NOI18N
+        jogo.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.png"))); // NOI18N
+
+        lbl_subtitulo.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lbl_subtitulo.setText("Personagens da Disney");
 
         lbl_titulo.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         lbl_titulo.setForeground(new java.awt.Color(51, 153, 255));
         lbl_titulo.setText("Jogo da Memória");
 
-        lbl_subtitulo.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lbl_subtitulo.setText("Personagens da Disney");
+        javax.swing.GroupLayout jogoLayout = new javax.swing.GroupLayout(jogo);
+        jogo.setLayout(jogoLayout);
+        jogoLayout.setHorizontalGroup(
+            jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jogoLayout.createSequentialGroup()
+                .addContainerGap(78, Short.MAX_VALUE)
+                .addComponent(lbl_titulo)
+                .addGap(84, 84, 84))
+            .addGroup(jogoLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_subtitulo))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jogoLayout.setVerticalGroup(
+            jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jogoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_titulo)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_subtitulo)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
+        );
+        jogo.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jogo.setLayer(lbl_subtitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jogo.setLayer(lbl_titulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout pnl_principal2Layout = new javax.swing.GroupLayout(pnl_principal2);
         pnl_principal2.setLayout(pnl_principal2Layout);
         pnl_principal2Layout.setHorizontalGroup(
             pnl_principal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_principal2Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(lbl_titulo)
-                .addContainerGap(85, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_principal2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnl_principal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_subtitulo)
-                    .addComponent(lbl_imagem))
-                .addGap(102, 102, 102))
+            .addComponent(jogo)
         );
         pnl_principal2Layout.setVerticalGroup(
             pnl_principal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_principal2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl_titulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbl_subtitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-                .addComponent(lbl_imagem)
-                .addGap(29, 29, 29))
+                .addComponent(jogo)
+                .addContainerGap())
         );
 
         jSplitPane1.setRightComponent(pnl_principal2);
@@ -176,15 +195,19 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rbt_IntermediarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_IntermediarioActionPerformed
-        // TODO add your handling code here:
+        JogoMemoria_Intermediario obj=new JogoMemoria_Intermediario();
+        jogo.add (obj);
+        obj.setVisible(true);
     }//GEN-LAST:event_rbt_IntermediarioActionPerformed
 
     private void rbt_InicianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_InicianteActionPerformed
-        // TODO add your handling code here:
+        JogoMemoria_Iniciante obj=new JogoMemoria_Iniciante();
+        jogo.add (obj);
+        obj.setVisible(true);
     }//GEN-LAST:event_rbt_InicianteActionPerformed
 
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_IniciarActionPerformed
 
     /**
@@ -214,6 +237,12 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -225,12 +254,13 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Iniciar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JDesktopPane jogo;
     private javax.swing.JLabel lbl_Tempo;
-    private javax.swing.JLabel lbl_imagem;
     private javax.swing.JLabel lbl_nivel;
     private javax.swing.JLabel lbl_subtitulo;
     private javax.swing.JLabel lbl_titulo;

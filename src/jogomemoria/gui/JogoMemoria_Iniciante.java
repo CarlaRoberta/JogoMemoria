@@ -9,12 +9,12 @@ package jogomemoria.gui;
  *
  * @author Aluno
  */
-public class JogoMemoria_Inciante extends javax.swing.JPanel {
+public class JogoMemoria_Iniciante extends javax.swing.JPanel {
 
     /**
      * Creates new form JogoMemoria_Inciante
      */
-    public JogoMemoria_Inciante() {
+    public JogoMemoria_Iniciante() {
         initComponents();
     }
 
