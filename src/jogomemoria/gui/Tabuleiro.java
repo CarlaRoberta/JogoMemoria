@@ -30,14 +30,8 @@ public class Tabuleiro extends javax.swing.JPanel {
     private void initComponents() {
 
         sppTabuleiro = new javax.swing.JSplitPane();
-        jogoMemoria_Iniciante1 = new jogomemoria.gui.JogoMemoria_Iniciante();
-        infos1 = new jogomemoria.gui.Infos();
 
         setLayout(new java.awt.BorderLayout());
-
-        sppTabuleiro.setTopComponent(jogoMemoria_Iniciante1);
-        sppTabuleiro.setRightComponent(infos1);
-
         add(sppTabuleiro, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -45,8 +39,6 @@ public class Tabuleiro extends javax.swing.JPanel {
         return sppTabuleiro;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private jogomemoria.gui.Infos infos1;
-    private jogomemoria.gui.JogoMemoria_Iniciante jogoMemoria_Iniciante1;
     private javax.swing.JSplitPane sppTabuleiro;
     // End of variables declaration//GEN-END:variables
 }

@@ -162,23 +162,29 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
+     
         String op=(String) cmb_niveis.getSelectedItem();
-        if(op.equals("Facil")) {
-            spp_painel.setRightComponent(jpf);
-            this.setSize(650,600);
+         Tabuleiro tb = new Tabuleiro();
+         if (cmb_niveis.equals("Facil")){
+            tb.getsppTabuleiro().setLeftComponent(jpf);
         }
-        if(op.equals("Intermediario")) {
-            spp_painel.setRightComponent(jpi);
-            this.setSize(750,750);
+        if (cmb_niveis.equals("Intermediario")){
+            tb.getsppTabuleiro().setLeftComponent(jpi);
         }
-        if(op.equals("Dificil")) {
-            spp_painel.setRightComponent(jpd);
-            this.setSize(670,1050);
-            
+        if (cmb_niveis.equals("Dificil")){
+            tb.getsppTabuleiro().setLeftComponent(jpd);
         }
+       spp_painel.setRightComponent(tb);
         this.repaint();
+        
+      
+     
+       
     }//GEN-LAST:event_btn_IniciarActionPerformed
-
+ 
+        
+    
+    
     /**
      * @param args the command line arguments
      */
