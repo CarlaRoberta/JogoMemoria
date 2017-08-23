@@ -10,7 +10,7 @@ package jogomemoria.gui;
  * @author Aluno
  */
 public class JogoMemoriaPrincipal extends javax.swing.JFrame {
-
+    Tabuleiro tb = new Tabuleiro();
     JogoMemoria_Iniciante jpf =new JogoMemoria_Iniciante();
     JogoMemoria_Intermediario jpi =new JogoMemoria_Intermediario();
     JogoMemoria_Dificil jpd =new JogoMemoria_Dificil();
@@ -78,7 +78,7 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
                 .addComponent(lbl_Tempo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,7 +164,6 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
      
         String op=(String) cmb_niveis.getSelectedItem();
-         Tabuleiro tb = new Tabuleiro();
          if (cmb_niveis.equals("Facil")){
             tb.getsppTabuleiro().setLeftComponent(jpf);
         }
