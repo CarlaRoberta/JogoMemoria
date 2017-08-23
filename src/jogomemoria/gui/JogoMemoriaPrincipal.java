@@ -163,14 +163,15 @@ public class JogoMemoriaPrincipal extends javax.swing.JFrame {
 
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
      
-        String op=(String) cmb_niveis.getSelectedItem();
-         if (cmb_niveis.equals("Facil")){
+        String item=(String) cmb_niveis.getSelectedItem();
+         if (item.equals("Facil")){
             tb.getsppTabuleiro().setLeftComponent(jpf);
+            this.setSize(900, 800);
         }
-        if (cmb_niveis.equals("Intermediario")){
+        if (item.equals("Intermediario")){
             tb.getsppTabuleiro().setLeftComponent(jpi);
         }
-        if (cmb_niveis.equals("Dificil")){
+        if (item.equals("Dificil")){
             tb.getsppTabuleiro().setLeftComponent(jpd);
         }
        spp_painel.setRightComponent(tb);
