@@ -64,9 +64,10 @@ public class JogoMemoria_Intermediario extends javax.swing.JPanel {
         img36 = new javax.swing.JLabel();
         img34 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.GridLayout(6, 6));
 
+        img1.setBackground(new java.awt.Color(204, 204, 255));
         img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
         add(img1);
 

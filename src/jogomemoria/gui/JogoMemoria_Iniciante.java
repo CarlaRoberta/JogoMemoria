@@ -46,6 +46,7 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.GridLayout(4, 4, 1, 1));
 
         lbl_img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N

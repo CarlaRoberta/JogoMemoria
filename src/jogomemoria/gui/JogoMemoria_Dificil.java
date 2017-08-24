@@ -82,6 +82,7 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
         lbl_img54 = new javax.swing.JLabel();
         lbl_img55 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.GridLayout(9, 6));
 
         lbl_img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
