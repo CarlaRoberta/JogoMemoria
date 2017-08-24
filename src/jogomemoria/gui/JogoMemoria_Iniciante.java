@@ -104,7 +104,7 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     
     private void lbl_img1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_img1MouseClicked
-       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.png"));
+       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpeg"));
        lbl_img1.setIcon(image);
     }//GEN-LAST:event_lbl_img1MouseClicked
 

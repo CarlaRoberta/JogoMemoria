@@ -89,7 +89,7 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         jogo.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.jpeg"))); // NOI18N
 
         lbl_subtitulo.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lbl_subtitulo.setText("Personagens da Disney");
