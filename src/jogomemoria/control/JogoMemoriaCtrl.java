@@ -91,15 +91,8 @@ public class JogoMemoriaCtrl {
         jogoIniciado=true;
         tempoLimite=tempoLimite*60;
         acertosPartida=0;
-       
-        Random sorteioImg = new Random();
-        
-        for ( int i = 1; i < MAX_IMAGENS_PARTIDA; i++) {
-            sorteioImg.nextInt();
-            int tabuleiro [][] ={{MAX_LIN_DIFICIL}, {MAX_COL_DIFICIL}};
-            int tabControle[][] = {{0},{0}};
-            
-           if (nivelAtual == 0){
+           
+        if (nivelAtual == 0){
             nivelAtual=FACIL;
             qtdImgsPartida= QTDE_PECAS_TAB_FACIL;
             
@@ -113,13 +106,7 @@ public class JogoMemoriaCtrl {
             nivelAtual=DIFICIL;
             qtdImgsPartida= QTDE_PECAS_TAB_DIFICIL;
             
-        }
-        
-        
-     }
-       
-        
-        
+        }             
        /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
         que precisam ter seus valores ajustados no ínício de cada partida:
            - O jogo deve ser sinalizado como iniciado.
@@ -130,13 +117,8 @@ public class JogoMemoriaCtrl {
            - Sortear imagens para a partida.
            - Distribuir imagens da partida no tabuleiro conforme o nível (preencher o tabuleiro).
            - Zerar todo o tabuleiro de controle.
-         */    
-        
-        
+         */   
     }
-
-    
-    
     /**
      * Realiza o sorteio de imagens para a partida, conforme índices de 1 até
      * MAX_PECAS_DISPONIVEIS. Se MAX_PECAS_DISPONIVEIS = 100 então sorteia 
@@ -144,6 +126,16 @@ public class JogoMemoriaCtrl {
      * necessárias para a partida (qtdImgsPartida)
      */
     private void sortearImagensPartida(){
+        
+        Random sorteioImg = new Random();
+        for ( int i = 1; i < MAX_IMAGENS_PARTIDA; i++) {
+            if(MAX_IMAGENS_PARTIDA == 100){
+            sorteioImg.nextInt();
+            int tabuleiro [][] ={{MAX_LIN_DIFICIL}, {MAX_COL_DIFICIL}};
+            int tabControle[][] = {{0},{0}};
+            }
+        }
+        
        /*
        ATIVIDADE #3.
        - Limpe o vetor de imagens da partida pois ele pode conter imagens de
@@ -164,28 +156,21 @@ public class JogoMemoriaCtrl {
         testando cada item com o valor de X. Se não estiver ainda, insira-o neste vetor e vá
        preenchendo ele. Se X já estiver presente você deve sortear outro número e o proessose repete.
 
-       */
-       
-       
-       
+       */  
     }
-    
-    
-    
     /**
     * Limpa o vetor de imagens usadas na partida (imgspartida) colocando 0 (ZERO) 
     * em cada célula e indicando que está vazia.
     * É usado como parte da iniciação de cada partida.
     */  
     private void limparImgsPartida() {
+              //int [][] imgsPartida = new int[][]{{0,0,0},
+              //                                  {0,0,0}};
+       this.imgsPartida = new int[0]; 
        //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
-       //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
-       
-       
+       //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.       
     }
-    
-    
-    
+    int qtdeImgsDefinidas =0;
     /**
      * Preenche o tabuleiro com duplas ou trios das imagens sorteadas, dependendo
      * do nível definido para a partida.
@@ -205,17 +190,9 @@ public class JogoMemoriaCtrl {
                  novamente até encontrar uma célula com valor 0.
                - Você deve controlar, usando uma variável, qual elemento do vetor imgsPartida[]
                  você está processando. Ou seja você deve processa do primeiro até o último elemento.
- 
-            */    
-        
-        
-        
-        
-        
+            */       
+        this.tabuleiro = new int [0][0];
     }
-    
-    
-        
    /**
     * Limpa os tabuleiros (Tabuleiro de imagens e o de controle) colocando 0 (ZERO) em cada célula, indicando que está vazia.
     * É usado como parte da iniciação de cada partida.
@@ -223,13 +200,10 @@ public class JogoMemoriaCtrl {
     private void limparTabuleiros() {
        //ATIVIDADE #4.1.
        //implementar laços para percorrer as células das matrizes 
-       //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
-       
-       
+       //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.  
+         this.tabuleiro = new int [0][0];
+         this.tabControle= new int [0][0];
     }
-    
-    
-
     /**
      * Tenta realizar uma jogada, envolvendo duas peças de tabuleiro. 
      * Os objetos PecaTabuleiro possuem atributos que representam uma posição 
@@ -264,19 +238,12 @@ public class JogoMemoriaCtrl {
                d) verifique se o jogo finalizou (acertou tudo ou terminou ot empo)
        
        */
-       
-       
-       
        return resultado;  //Esta linha irá retornar o resultado da operação
                           // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
                           //Na tela teremos condições de fazer ela se comportar 
                           //em função do valor que este método retornar. 
     }
-  
-    
-    
-    
-        /**
+     /**
      * Tenta realizar uma jogada, envolvendo TRÊS peças de tabuleiro em moldes
      * semelhantes ao outro método para duas peças.
      * @param pt1 Primeira peça de tabuleiro (PecaTabuleiro) selecionada.
@@ -286,17 +253,11 @@ public class JogoMemoriaCtrl {
      * 
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2, PecaTabuleiro pt3) {
-       int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-       
+       int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor
        /*
        ATIVIDADE #6. Implemente este método de forma semelhante ao da 
        atividade nº 5 mas para o caso de 3 peças.
-       */
-       
-       
+       */  
        return resultado;  
     }
-    
-    
-    
 }
