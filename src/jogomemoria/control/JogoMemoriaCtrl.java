@@ -157,8 +157,8 @@ public class JogoMemoriaCtrl {
         limparImgsPartida();
         int qtdeSorteadas = 0;
 
-        while (qtdeSorteadas < qtdImgsPartida) {
-            int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
+        while (qtdeSorteadas < qtdImgsPartida) {//se a quantidade de imagens sortiadas for igual a quantidas de imagens de partidas
+            int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);//atribui o metodo obterNumSorteado para i  
             boolean achou = false;
             for (int k = 0; k < qtdeSorteadas; k++) {
                 if (imgsPartida[k] == i) {
@@ -229,16 +229,18 @@ public class JogoMemoriaCtrl {
          - Você deve controlar, usando uma variável, qual elemento do vetor imgsPartida[]
          você está processando. Ou seja você deve processa do primeiro até o último elemento.
          */
-        int tabControle[][] = {{0}, {0}};
+        int tabControle[][] = {{0}, {0}};//limpando o tabuleiro
         for (int i = 0; i < imgsPartida.length; i++) {
-            if (nivel == 1 || nivel == 2) {
+            if (nivel == FACIL || nivel == INTERMEDIARIO) {//se o nivel for facil e intermediario ele vai multiplicar o a imagem partida em  2 imagens iguais
                 imgsPartida[i] = i * 2;
                 Random sorteioImg = new Random();
                 sorteioImg.nextInt();
             } else {
-                imgsPartida[i] = i * 3;
-                Random sorteioImg = new Random();
-                sorteioImg.nextInt();
+                if (nivel == DIFICIL) {//se o nivel for dificil ele vai multiplicar o a imagem partida em 3 imagens iguais
+                    imgsPartida[i] = i * 3;
+                    Random sorteioImg = new Random();
+                    sorteioImg.nextInt();
+                }
             }
         }
     }
