@@ -49,6 +49,8 @@ public class JogoMemoriaCtrl {
     private int tabRecordes[][] = {{0, 0, 0}, //Quadro de melhores pontuações por nível (Recordes)
     {0, 0, 0}, //Linha = Nível e Coluna = Ouro, prata ou bronze.
     {0, 0, 0}};
+    private int linhaMax;//maximo de linhas do tabuleiro
+    private int colunaMax;//maximo de colunas do tabuleiro
     private int acertosPartida;   //Quantidade de acertos na partida
     private int[] imgsPartida = new int[MAX_IMAGENS_PARTIDA];//Vetor de imagens sorteadas para a partida atual. Considera o tamanho suficiente para o nível difícil
     private int qtdImgsPartida; //Quantidade de imgens usadas na partida. Controla o uso de células do vetor imgsPartida conforme o nível da partida atual.           
@@ -95,21 +97,29 @@ public class JogoMemoriaCtrl {
         if (nivel == FACIL) {
             nivelAtual = FACIL;
             qtdImgsPartida = QTDE_IMGS_FACIL;
+            linhaMax = MAX_LIN_FACIL;//número máximo de linhas do tabuleiro no nivel facil
+            colunaMax = MAX_COL_FACIL;//número máximo de colunas do tabuleiro no nivel facil
 
-        }
-        if (nivel == INTERMEDIARIO) {
-            nivelAtual = INTERMEDIARIO;
-            qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
-
-        }
-        if (nivel == DIFICIL) {
-            nivelAtual = DIFICIL;
-            qtdImgsPartida = QTDE_IMGS_DIFICIL;
-
+        } else {
+            if (nivel == INTERMEDIARIO) {
+                nivelAtual = INTERMEDIARIO;
+                qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
+                linhaMax = MAX_LIN_INTERMEDIARIO;//número máximo de linhas do tabuleiro no nivel intemediario
+                colunaMax = MAX_COL_INTERMEDIARIO;//número máximo de colunas do tabuleiro no nivel intemediario
+            } else {
+                if (nivel == DIFICIL) {
+                    nivelAtual = DIFICIL;
+                    qtdImgsPartida = QTDE_IMGS_DIFICIL;
+                    linhaMax = MAX_LIN_DIFICIL;//número máximo de linhas do tabuleiro no nivel dificil
+                    colunaMax = MAX_COL_DIFICIL;//número máximo de colunas do tabuleiro no nivel dificil
+                } else {
+                    System.out.println("ERRO"); //lança uma exeção caso não esteja no nivel certo
+                }
+            }
         }
 
         sortearImagensPartida();
-        preencherTabuleiro();
+        preencherTabuleiro(nivel);
         limparTabuleiros();
 
         /*ATIVIDADE #2 - Implementar a iniciação de uma partida. Pense nas variáveis
@@ -143,25 +153,25 @@ public class JogoMemoriaCtrl {
     }
 
     private void sortearImagensPartida() {
-        
+
         limparImgsPartida();
         int qtdeSorteadas = 0;
-        
+
         while (qtdeSorteadas < qtdImgsPartida) {
             int i = obterNumSorteado(1, QTDE_IMAGENS_DISPONIVEIS);
-            boolean achou = false; 
+            boolean achou = false;
             for (int k = 0; k < qtdeSorteadas; k++) {
                 if (imgsPartida[k] == i) {
                     achou = true;
-                    break;
                 }
+                break;
             }
             if (!achou) {
                 imgsPartida[qtdImgsPartida] = i;
                 qtdImgsPartida++;
             }
         }
-     
+
 
         /*
          ATIVIDADE #3.
@@ -203,7 +213,7 @@ public class JogoMemoriaCtrl {
      * Preenche o tabuleiro com duplas ou trios das imagens sorteadas,
      * dependendo do nível definido para a partida.
      */
-    private void preencherTabuleiro() {
+    private void preencherTabuleiro(int nivel) {
         /*
          ATIVIDADE #4.
          - Limpe o tabuleiro da partida pois ele pode conter dados de
@@ -219,7 +229,18 @@ public class JogoMemoriaCtrl {
          - Você deve controlar, usando uma variável, qual elemento do vetor imgsPartida[]
          você está processando. Ou seja você deve processa do primeiro até o último elemento.
          */
-        this.tabuleiro = new int[0][0];
+        int tabControle[][] = {{0}, {0}};
+        for (int i = 0; i < imgsPartida.length; i++) {
+            if (nivel == 1 || nivel == 2) {
+                imgsPartida[i] = i * 2;
+                Random sorteioImg = new Random();
+                sorteioImg.nextInt();
+            } else {
+                imgsPartida[i] = i * 3;
+                Random sorteioImg = new Random();
+                sorteioImg.nextInt();
+            }
+        }
     }
 
     /**
@@ -255,7 +276,22 @@ public class JogoMemoriaCtrl {
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2) {
         int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
-
+        if (pt1.getIdImagem() == pt2.getIdImagem()) {
+            if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
+                    && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {//Verifica se as peças pt1 e pt2 possuem linha e coluna dentro do limites do tabuleiro.
+                int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];//testa se os valores de linha e coluna estão dentro dos limites.
+                int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];//testa se os valores de linha e coluna estão dentro dos limites.
+                if ((vrControle1 == 0) && (vrControle2 == 0)) {//verifica se se ambos pussuem o valor 0
+                    resultado = JOGADA_CERTA;
+                    pontuacaoAtual++;
+                    tabControle[pt1.getLinha()][pt1.getColuna()] = 1;//atualiza o valor de como virada para 1
+                    tabControle[pt2.getLinha()][pt2.getColuna()] = 1;//atualiza o valor de como virada para 1
+                } else {
+                    resultado = JOGADA_ERRADA;//caso ocorra erro na jogada
+                }
+            }
+        }
+        return resultado;  //Esta linha irá retornar o resultado da operação
         /*
          ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
          com base nas duas peças de tabuleiro recebidas como parâmetro.
@@ -273,10 +309,9 @@ public class JogoMemoriaCtrl {
          a) altere o valor da variável resultado para JOGADA_CERTA;
          b) some um ponto na pontuação atual;
          c) atualize a tabControle[][], marcando as duas peças (pt1 e pt2) como viradas ou abertas (valor 1)
-         d) verifique se o jogo finalizou (acertou tudo ou terminou ot empo)
+         d) verifique se o jogo finalizou (acertou tudo ou terminou o tempo)
        
          */
-        return resultado;  //Esta linha irá retornar o resultado da operação
         // se JOGADA_CERTA, JOGADA_ERRADA ou JOGADA_INVALIDA.
         //Na tela teremos condições de fazer ela se comportar 
         //em função do valor que este método retornar. 
@@ -294,11 +329,28 @@ public class JogoMemoriaCtrl {
      *
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2, PecaTabuleiro pt3) {
-        int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor
-       /*
-         ATIVIDADE #6. Implemente este método de forma semelhante ao da 
-         atividade nº 5 mas para o caso de 3 peças.
-         */
+        int resultado = JOGADA_INVALIDA;  //O resultado inicia pessimista. Estratégia definida pelo professor.
+        if (pt1.getIdImagem() == pt2.getIdImagem()) {
+            if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
+                    && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)
+                    && (pt3.getLinha() <= linhaMax) && (pt3.getColuna() <= colunaMax)) {//Verifica se as peças pt1 e pt2 possuem linha e coluna dentro do limites do tabuleiro.
+                int vrControle1 = tabControle[pt1.getLinha()][pt1.getColuna()];//testa se os valores de linha e coluna estão dentro dos limites.
+                int vrControle2 = tabControle[pt2.getLinha()][pt2.getColuna()];//testa se os valores de linha e coluna estão dentro dos limites.
+                int vrControle3 = tabControle[pt3.getLinha()][pt3.getColuna()];//testa se os valores de linha e coluna estão dentro dos limites.
+                if ((vrControle1 == 0) && (vrControle2 == 0) && (vrControle3 == 0)) {//verifica se se ambos pussuem o valor 0
+                    resultado = JOGADA_CERTA;
+                    pontuacaoAtual++;
+                    tabControle[pt1.getLinha()][pt1.getColuna()] = 1;//atualiza o valor de como virada para 1
+                    tabControle[pt2.getLinha()][pt2.getColuna()] = 1;//atualiza o valor de como virada para 1
+                    tabControle[pt3.getLinha()][pt3.getColuna()] = 1;//atualiza o valor de como virada para 1
+                } else {
+                    resultado = JOGADA_ERRADA;
+                }
+            }
+        }
         return resultado;
     }
-}
+}       /*
+ ATIVIDADE #6. Implemente este método de forma semelhante ao da 
+ atividade nº 5 mas par/a o caso de 3 peças.
+ */

@@ -1,10 +1,27 @@
-
 package jogomemoria.model;
 
-
 public class PecaTabuleiro {
-    private int linha;
-    private int coluna;
+
+    private int numero;//numero de imagens
+    private int idImagem;// cada imagens 
+    private int linha;//linha do tabuleiro
+    private int coluna;//linha da coluna
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getIdImagem() {
+        return idImagem;
+    }
+
+    public void setIdImagem(int idImagem) {
+        this.idImagem = idImagem;
+    }
 
     /**
      * @return the linha
@@ -33,6 +50,5 @@ public class PecaTabuleiro {
     public void setColuna(int coluna) {
         this.coluna = coluna;
     }
-    
-    
+
 }
