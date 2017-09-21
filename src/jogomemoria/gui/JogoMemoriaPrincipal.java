@@ -1,12 +1,13 @@
 package jogomemoria.gui;
-
 import javax.swing.JFrame;
+import jogomemoria.control.JogoMemoriaCtrl;
 
 public class JogoMemoriaPrincipal extends JFrame {
     Tabuleiro tb = new Tabuleiro();
     JogoMemoria_Iniciante jpf =new JogoMemoria_Iniciante();
     JogoMemoria_Intermediario jpi =new JogoMemoria_Intermediario();
     JogoMemoria_Dificil jpd =new JogoMemoria_Dificil();
+    private JogoMemoriaCtrl controle = new JogoMemoriaCtrl();
     public JogoMemoriaPrincipal() {
         initComponents();
     }
@@ -19,7 +20,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         spp_painel = new javax.swing.JSplitPane();
         pnl_Principal = new javax.swing.JPanel();
         lbl_Tempo = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
+        spn_tempo = new javax.swing.JSpinner();
         btn_Iniciar = new javax.swing.JButton();
         cmb_niveis = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
@@ -64,7 +65,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addContainerGap()
                 .addComponent(lbl_Tempo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(spn_tempo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -78,7 +79,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addContainerGap()
                 .addGroup(pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_Tempo)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spn_tempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Iniciar)
                     .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -149,8 +150,13 @@ public class JogoMemoriaPrincipal extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
-     
         String item=(String) cmb_niveis.getSelectedItem();
+        int n=0;
+        int t=((Integer)spn_tempo.getValue()).intValue();
+        
+        n=Integer.parseInt(item);
+        
+        controle.iniciarPartida(n,t);
          if (item.equals("Facil")){
             tb.getsppTabuleiro().setLeftComponent(jpf);
             this.setSize(900, 800);
@@ -185,7 +191,6 @@ public class JogoMemoriaPrincipal extends JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JDesktopPane jogo;
     private javax.swing.JLabel lbl_Tempo;
@@ -193,6 +198,7 @@ public class JogoMemoriaPrincipal extends JFrame {
     private javax.swing.JLabel lbl_titulo;
     private javax.swing.JPanel pnl_Principal;
     private javax.swing.JPanel pnl_principal2;
+    private javax.swing.JSpinner spn_tempo;
     private javax.swing.JSplitPane spp_painel;
     // End of variables declaration//GEN-END:variables
 }

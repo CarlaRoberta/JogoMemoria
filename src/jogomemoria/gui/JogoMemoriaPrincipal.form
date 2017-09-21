@@ -66,7 +66,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lbl_Tempo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jSpinner2" min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="spn_tempo" min="-2" pref="68" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl_Tempo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="spn_tempo" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_Iniciar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cmb_niveis" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -101,7 +101,7 @@
                 <Property name="text" type="java.lang.String" value="Tempo Limite:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JSpinner" name="jSpinner2">
+            <Component class="javax.swing.JSpinner" name="spn_tempo">
             </Component>
             <Component class="javax.swing.JButton" name="btn_Iniciar">
               <Properties>

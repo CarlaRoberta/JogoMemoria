@@ -6,19 +6,31 @@ public class PecaTabuleiro {
     private int idImagem;// cada imagens 
     private int linha;//linha do tabuleiro
     private int coluna;//linha da coluna
+    private boolean virado;
 
+    /**
+     * @return the numero
+     */
     public int getNumero() {
         return numero;
     }
-
+    /**
+     * @param numero the coluna to set
+     */
     public void setNumero(int numero) {
         this.numero = numero;
     }
 
+    /**
+     * @return the imagem
+     */
     public int getIdImagem() {
         return idImagem;
     }
-
+    
+    /**
+     * @param idImagem the coluna to set
+     */
     public void setIdImagem(int idImagem) {
         this.idImagem = idImagem;
     }
@@ -49,6 +61,20 @@ public class PecaTabuleiro {
      */
     public void setColuna(int coluna) {
         this.coluna = coluna;
+    }
+
+    /**
+     * @return the virado
+     */
+    public boolean isVirado() {
+        return virado;
+    }
+
+    /**
+     * @param virado the virado to set
+     */
+    public void setVirado(boolean virado) {
+        this.virado = virado;
     }
 
 }
