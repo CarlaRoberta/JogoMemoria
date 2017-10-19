@@ -1,15 +1,19 @@
 package jogomemoria.gui;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.model.PecaTabuleiro;
 
 public class JogoMemoriaPrincipal extends JFrame {
     Tabuleiro tb = new Tabuleiro();
     JogoMemoria_Iniciante jpf =new JogoMemoria_Iniciante();
     JogoMemoria_Intermediario jpi =new JogoMemoria_Intermediario();
     JogoMemoria_Dificil jpd =new JogoMemoria_Dificil();
-    private JogoMemoriaCtrl controle = new JogoMemoriaCtrl();
+    private JogoMemoriaCtrl controle;
+    
     public JogoMemoriaPrincipal() {
         initComponents();
+        controle = new JogoMemoriaCtrl();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -151,29 +155,55 @@ public class JogoMemoriaPrincipal extends JFrame {
 
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
         String item=(String) cmb_niveis.getSelectedItem();
-        int n=0;
-        int t=((Integer)spn_tempo.getValue()).intValue();
+        int nivelSelect=0;
         
-        n=Integer.parseInt(item);
         
-        controle.iniciarPartida(n,t);
          if (item.equals("Facil")){
-            tb.getsppTabuleiro().setLeftComponent(jpf);
+            nivelSelect = controle.FACIL;
             this.setSize(900, 800);
         }
         if (item.equals("Intermediario")){
-            tb.getsppTabuleiro().setLeftComponent(jpi);
+            nivelSelect = controle.INTERMEDIARIO;
         }
         if (item.equals("Dificil")){
-            tb.getsppTabuleiro().setLeftComponent(jpd);
+            nivelSelect = controle.DIFICIL;
         }
-       spp_painel.setRightComponent(tb);
-        this.repaint();                 
+        int tempoLimite = (((Integer)spn_tempo.getValue()).intValue());
+        spp_painel.setRightComponent(tb);
+        this.repaint();
+        controle.iniciarPartida(nivelSelect, tempoLimite);
     }//GEN-LAST:event_btn_IniciarActionPerformed
  
         
     
-    
+    public void mostrarTabuleiro(boolean inicioJogo){
+        PecaTabuleiro pctb[][] =  controle.getTabuleiro();
+        int idImg;
+        
+        ImageIcon imgDuvida = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/interrogação"));
+        
+        int nivel = controle.getNivelAtual();
+        if(controle.FACIL == nivel){
+            
+            if (inicioJogo || pctb[0][0].isVirado()){
+                idImg = pctb[0][0].getIdImagem();
+                ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
+                (jpf.getLbl00()).setIcon(img00);
+            }else{
+                (jpf.getLbl00()).setIcon(imgDuvida);
+            }
+         tb.getsppTabuleiro().setLeftComponent(jpf);            
+        }
+        if(controle.INTERMEDIARIO == nivel){
+            tb.getsppTabuleiro().setLeftComponent(jpi);
+        }
+        if(controle.DIFICIL == nivel){
+            tb.getsppTabuleiro().setLeftComponent(jpd);
+        }
+        
+        
+        
+    }
     /**
      * @param args the command line arguments
      */

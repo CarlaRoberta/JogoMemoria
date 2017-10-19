@@ -29,102 +29,326 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_img1 = new javax.swing.JLabel();
-        lbl_img2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        lbl_img9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        lbl_img8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lbl00 = new javax.swing.JLabel();
+        lbl01 = new javax.swing.JLabel();
+        lbl02 = new javax.swing.JLabel();
+        lbl03 = new javax.swing.JLabel();
+        lbl10 = new javax.swing.JLabel();
+        lbl11 = new javax.swing.JLabel();
+        lbl12 = new javax.swing.JLabel();
+        lbl13 = new javax.swing.JLabel();
+        lbl20 = new javax.swing.JLabel();
+        lbl21 = new javax.swing.JLabel();
+        lbl22 = new javax.swing.JLabel();
+        lbl23 = new javax.swing.JLabel();
+        lbl30 = new javax.swing.JLabel();
+        lbl31 = new javax.swing.JLabel();
+        lbl32 = new javax.swing.JLabel();
+        lbl33 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.GridLayout(4, 4, 1, 1));
 
-        lbl_img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        lbl_img1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lbl00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lbl_img1MouseClicked(evt);
+                lbl00MouseClicked(evt);
             }
         });
-        add(lbl_img1);
+        add(lbl00);
 
-        lbl_img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(lbl_img2);
+        lbl01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl01);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel1);
+        lbl02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl02);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel2);
+        lbl03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl03);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel3);
+        lbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl10);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel4);
+        lbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl11);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel5);
+        lbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl12);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel6);
+        lbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl13);
 
-        lbl_img9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(lbl_img9);
+        lbl20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl20);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel7);
+        lbl21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl21);
 
-        lbl_img8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(lbl_img8);
+        lbl22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl22);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel9);
+        lbl23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl23);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel8);
+        lbl30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl30);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel10);
+        lbl31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl31);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel11);
+        lbl32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl32);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
-        add(jLabel12);
+        lbl33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        add(lbl33);
     }// </editor-fold>//GEN-END:initComponents
     
-    private void lbl_img1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_img1MouseClicked
+    private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
        ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpeg"));
-       lbl_img1.setIcon(image);
-    }//GEN-LAST:event_lbl_img1MouseClicked
+        getLbl00().setIcon(image);
+    }//GEN-LAST:event_lbl00MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel lbl_img1;
-    private javax.swing.JLabel lbl_img2;
-    private javax.swing.JLabel lbl_img8;
-    private javax.swing.JLabel lbl_img9;
+    private javax.swing.JLabel lbl00;
+    private javax.swing.JLabel lbl01;
+    private javax.swing.JLabel lbl02;
+    private javax.swing.JLabel lbl03;
+    private javax.swing.JLabel lbl10;
+    private javax.swing.JLabel lbl11;
+    private javax.swing.JLabel lbl12;
+    private javax.swing.JLabel lbl13;
+    private javax.swing.JLabel lbl20;
+    private javax.swing.JLabel lbl21;
+    private javax.swing.JLabel lbl22;
+    private javax.swing.JLabel lbl23;
+    private javax.swing.JLabel lbl30;
+    private javax.swing.JLabel lbl31;
+    private javax.swing.JLabel lbl32;
+    private javax.swing.JLabel lbl33;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the lbl00
+     */
+    public javax.swing.JLabel getLbl00() {
+        return lbl00;
+    }
+
+    /**
+     * @param lbl00 the lbl00 to set
+     */
+    public void setLbl00(javax.swing.JLabel lbl00) {
+        this.lbl00 = lbl00;
+    }
+
+    /**
+     * @return the lbl01
+     */
+    public javax.swing.JLabel getLbl01() {
+        return lbl01;
+    }
+
+    /**
+     * @param lbl01 the lbl01 to set
+     */
+    public void setLbl01(javax.swing.JLabel lbl01) {
+        this.lbl01 = lbl01;
+    }
+
+    /**
+     * @return the lbl02
+     */
+    public javax.swing.JLabel getLbl02() {
+        return lbl02;
+    }
+
+    /**
+     * @param lbl02 the lbl02 to set
+     */
+    public void setLbl02(javax.swing.JLabel lbl02) {
+        this.lbl02 = lbl02;
+    }
+
+    /**
+     * @return the lbl03
+     */
+    public javax.swing.JLabel getLbl03() {
+        return lbl03;
+    }
+
+    /**
+     * @param lbl03 the lbl03 to set
+     */
+    public void setLbl03(javax.swing.JLabel lbl03) {
+        this.lbl03 = lbl03;
+    }
+
+    /**
+     * @return the lbl10
+     */
+    public javax.swing.JLabel getLbl10() {
+        return lbl10;
+    }
+
+    /**
+     * @param lbl10 the lbl10 to set
+     */
+    public void setLbl10(javax.swing.JLabel lbl10) {
+        this.lbl10 = lbl10;
+    }
+
+    /**
+     * @return the lbl11
+     */
+    public javax.swing.JLabel getLbl11() {
+        return lbl11;
+    }
+
+    /**
+     * @param lbl11 the lbl11 to set
+     */
+    public void setLbl11(javax.swing.JLabel lbl11) {
+        this.lbl11 = lbl11;
+    }
+
+    /**
+     * @return the lbl12
+     */
+    public javax.swing.JLabel getLbl12() {
+        return lbl12;
+    }
+
+    /**
+     * @param lbl12 the lbl12 to set
+     */
+    public void setLbl12(javax.swing.JLabel lbl12) {
+        this.lbl12 = lbl12;
+    }
+
+    /**
+     * @return the lbl13
+     */
+    public javax.swing.JLabel getLbl13() {
+        return lbl13;
+    }
+
+    /**
+     * @param lbl13 the lbl13 to set
+     */
+    public void setLbl13(javax.swing.JLabel lbl13) {
+        this.lbl13 = lbl13;
+    }
+
+    /**
+     * @return the lbl20
+     */
+    public javax.swing.JLabel getLbl20() {
+        return lbl20;
+    }
+
+    /**
+     * @param lbl20 the lbl20 to set
+     */
+    public void setLbl20(javax.swing.JLabel lbl20) {
+        this.lbl20 = lbl20;
+    }
+
+    /**
+     * @return the lbl21
+     */
+    public javax.swing.JLabel getLbl21() {
+        return lbl21;
+    }
+
+    /**
+     * @param lbl21 the lbl21 to set
+     */
+    public void setLbl21(javax.swing.JLabel lbl21) {
+        this.lbl21 = lbl21;
+    }
+
+    /**
+     * @return the lbl22
+     */
+    public javax.swing.JLabel getLbl22() {
+        return lbl22;
+    }
+
+    /**
+     * @param lbl22 the lbl22 to set
+     */
+    public void setLbl22(javax.swing.JLabel lbl22) {
+        this.lbl22 = lbl22;
+    }
+
+    /**
+     * @return the lbl23
+     */
+    public javax.swing.JLabel getLbl23() {
+        return lbl23;
+    }
+
+    /**
+     * @param lbl23 the lbl23 to set
+     */
+    public void setLbl23(javax.swing.JLabel lbl23) {
+        this.lbl23 = lbl23;
+    }
+
+    /**
+     * @return the lbl30
+     */
+    public javax.swing.JLabel getLbl30() {
+        return lbl30;
+    }
+
+    /**
+     * @param lbl30 the lbl30 to set
+     */
+    public void setLbl30(javax.swing.JLabel lbl30) {
+        this.lbl30 = lbl30;
+    }
+
+    /**
+     * @return the lbl31
+     */
+    public javax.swing.JLabel getLbl31() {
+        return lbl31;
+    }
+
+    /**
+     * @param lbl31 the lbl31 to set
+     */
+    public void setLbl31(javax.swing.JLabel lbl31) {
+        this.lbl31 = lbl31;
+    }
+
+    /**
+     * @return the lbl32
+     */
+    public javax.swing.JLabel getLbl32() {
+        return lbl32;
+    }
+
+    /**
+     * @param lbl32 the lbl32 to set
+     */
+    public void setLbl32(javax.swing.JLabel lbl32) {
+        this.lbl32 = lbl32;
+    }
+
+    /**
+     * @return the lbl33
+     */
+    public javax.swing.JLabel getLbl33() {
+        return lbl33;
+    }
+
+    /**
+     * @param lbl33 the lbl33 to set
+     */
+    public void setLbl33(javax.swing.JLabel lbl33) {
+        this.lbl33 = lbl33;
+    }
 }
