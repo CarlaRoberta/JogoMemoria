@@ -94,7 +94,7 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         jogo.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.jpeg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.jpg"))); // NOI18N
 
         lbl_subtitulo.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         lbl_subtitulo.setText("Personagens da Disney");
@@ -892,7 +892,7 @@ public class JogoMemoriaPrincipal extends JFrame {
             } else {
                 (jpd.getLbl55()).setIcon(imgDuvida);
             }
-             
+            
             if (inicioJogo || pctb[6][0].isVirado()) {
                 idImg = pctb[6][0].getIdImagem();
                 ImageIcon img60 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
@@ -900,7 +900,8 @@ public class JogoMemoriaPrincipal extends JFrame {
             } else {
                 (jpd.getLbl60()).setIcon(imgDuvida);
             }
-            
+             
+           
             if (inicioJogo || pctb[6][1].isVirado()) {
                 idImg = pctb[6][1].getIdImagem();
                 ImageIcon img61 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
