@@ -21,7 +21,7 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         jSpinner1 = new javax.swing.JSpinner();
         jTextField1 = new javax.swing.JTextField();
-        spp_painel = new javax.swing.JSplitPane();
+        sppPrincipal = new javax.swing.JSplitPane();
         pnl_Principal = new javax.swing.JPanel();
         lbl_Tempo = new javax.swing.JLabel();
         spn_tempo = new javax.swing.JSpinner();
@@ -38,8 +38,8 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        spp_painel.setDividerLocation(45);
-        spp_painel.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+        sppPrincipal.setDividerLocation(45);
+        sppPrincipal.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
         pnl_Principal.setToolTipText("");
         pnl_Principal.setFocusable(false);
@@ -90,7 +90,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        spp_painel.setLeftComponent(pnl_Principal);
+        sppPrincipal.setLeftComponent(pnl_Principal);
 
         jogo.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -146,9 +146,9 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addContainerGap())
         );
 
-        spp_painel.setRightComponent(pnl_principal2);
+        sppPrincipal.setRightComponent(pnl_principal2);
 
-        getContentPane().add(spp_painel, java.awt.BorderLayout.CENTER);
+        getContentPane().add(sppPrincipal, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -169,9 +169,10 @@ public class JogoMemoriaPrincipal extends JFrame {
             nivelSelect = controle.DIFICIL;
         }
         int tempoLimite = (((Integer)spn_tempo.getValue()).intValue());
-        spp_painel.setRightComponent(tb);
+        sppPrincipal.setRightComponent(tb);
         this.repaint();
         controle.iniciarPartida(nivelSelect, tempoLimite);
+        mostrarTabuleiro(true);
     }//GEN-LAST:event_btn_IniciarActionPerformed
  
         
@@ -179,13 +180,12 @@ public class JogoMemoriaPrincipal extends JFrame {
     public void mostrarTabuleiro(boolean inicioJogo){
         PecaTabuleiro pctb[][] =  controle.getTabuleiro();
         int idImg;
-        
-        ImageIcon imgDuvida = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/interrogação"));
+        ImageIcon imgDuvida = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/interrog.jpg"));
         
         int nivel = controle.getNivelAtual();
         if(controle.FACIL == nivel){
             
-            if (inicioJogo && pctb[0][0].isVirado()){
+            if (inicioJogo || pctb[0][0].isVirado()){
                 idImg = pctb[0][0].getIdImagem();
                 ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl00()).setIcon(img00);
@@ -193,7 +193,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl00()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[0][1].isVirado()){
+             if (inicioJogo || pctb[0][1].isVirado()){
                 idImg = pctb[0][1].getIdImagem();
                 ImageIcon img01 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl01()).setIcon(img01);
@@ -201,7 +201,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl01()).setIcon(imgDuvida);
             }
             
-              if (inicioJogo && pctb[0][2].isVirado()){
+              if (inicioJogo || pctb[0][2].isVirado()){
                 idImg = pctb[0][2].getIdImagem();
                 ImageIcon img02 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl02()).setIcon(img02);
@@ -209,7 +209,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl02()).setIcon(imgDuvida);
             }
             
-            if (inicioJogo && pctb[0][3].isVirado()){
+            if (inicioJogo || pctb[0][3].isVirado()){
                 idImg = pctb[0][3].getIdImagem();
                 ImageIcon img03 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl03()).setIcon(img03);
@@ -217,14 +217,14 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl03()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][0].isVirado()){
+             if (inicioJogo || pctb[1][0].isVirado()){
                 idImg = pctb[1][0].getIdImagem();
                 ImageIcon img10 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl10()).setIcon(img10);
             }else{
                 (jpf.getLbl10()).setIcon(imgDuvida);
             }
-              if (inicioJogo && pctb[1][1].isVirado()){
+              if (inicioJogo || pctb[1][1].isVirado()){
                 idImg = pctb[1][1].getIdImagem();
                 ImageIcon img11 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl11()).setIcon(img11);
@@ -232,7 +232,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl11()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][2].isVirado()){
+             if (inicioJogo || pctb[1][2].isVirado()){
                 idImg = pctb[1][2].getIdImagem();
                 ImageIcon img12 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl12()).setIcon(img12);
@@ -240,7 +240,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl12()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][3].isVirado()){
+             if (inicioJogo || pctb[1][3].isVirado()){
                 idImg = pctb[1][3].getIdImagem();
                 ImageIcon img13 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpf.getLbl13()).setIcon(img13);
@@ -248,7 +248,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl13()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[2][0].isVirado()) {
+             if (inicioJogo || pctb[2][0].isVirado()) {
                 idImg = pctb[2][0].getIdImagem();
                 ImageIcon img20 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl20()).setIcon(img20);
@@ -256,7 +256,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl20()).setIcon(imgDuvida);
             }
             
-              if (!inicioJogo && pctb[2][1].isVirado()) {
+              if (inicioJogo || pctb[2][1].isVirado()) {
                 idImg = pctb[2][1].getIdImagem();
                 ImageIcon img21 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl21()).setIcon(img21);
@@ -264,7 +264,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl21()).setIcon(imgDuvida);
             }
              
-            if (!inicioJogo && pctb[2][2].isVirado()) {
+            if (inicioJogo || pctb[2][2].isVirado()) {
                 idImg = pctb[2][2].getIdImagem();
                 ImageIcon img22 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl22()).setIcon(img22);
@@ -272,7 +272,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl22()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[2][3].isVirado()) {
+            if (inicioJogo || pctb[2][3].isVirado()) {
                 idImg = pctb[2][3].getIdImagem();
                 ImageIcon img23 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl23()).setIcon(img23);
@@ -280,7 +280,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl23()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][0].isVirado()) {
+            if (inicioJogo || pctb[3][0].isVirado()) {
                 idImg = pctb[3][0].getIdImagem();
                 ImageIcon img30 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl30()).setIcon(img30);
@@ -288,7 +288,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl30()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][1].isVirado()) {
+            if (inicioJogo || pctb[3][1].isVirado()) {
                 idImg = pctb[3][1].getIdImagem();
                 ImageIcon img31 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl31()).setIcon(img31);
@@ -296,7 +296,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl31()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][2].isVirado()) {
+            if (inicioJogo || pctb[3][2].isVirado()) {
                 idImg = pctb[3][2].getIdImagem();
                 ImageIcon img32 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl32()).setIcon(img32);
@@ -304,7 +304,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpf.getLbl32()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][3].isVirado()) {
+            if (inicioJogo || pctb[3][3].isVirado()) {
                 idImg = pctb[3][3].getIdImagem();
                 ImageIcon img33 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpf.getLbl33()).setIcon(img33);
@@ -313,10 +313,10 @@ public class JogoMemoriaPrincipal extends JFrame {
             }
             
             
-         tb.getsppTabuleiro().setLeftComponent(jpf);            
+            tb.getsppTabuleiro().setLeftComponent(jpf);            
         }
         if(controle.INTERMEDIARIO == nivel){
-             if (inicioJogo && pctb[0][0].isVirado()){
+             if (inicioJogo || pctb[0][0].isVirado()){
                 idImg = pctb[0][0].getIdImagem();
                 ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl00()).setIcon(img00);
@@ -324,7 +324,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl00()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][1].isVirado()){
+             if (inicioJogo || pctb[0][1].isVirado()){
                 idImg = pctb[0][1].getIdImagem();
                 ImageIcon img01 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl01()).setIcon(img01);
@@ -332,7 +332,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl01()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][2].isVirado()){
+             if (inicioJogo || pctb[0][2].isVirado()){
                 idImg = pctb[0][2].getIdImagem();
                 ImageIcon img02 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl02()).setIcon(img02);
@@ -340,7 +340,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl02()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[0][3].isVirado()){
+             if (inicioJogo || pctb[0][3].isVirado()){
                 idImg = pctb[0][3].getIdImagem();
                 ImageIcon img03 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl03()).setIcon(img03);
@@ -348,7 +348,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl03()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][4].isVirado()){
+             if (inicioJogo || pctb[0][4].isVirado()){
                 idImg = pctb[0][4].getIdImagem();
                 ImageIcon img04 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl04()).setIcon(img04);
@@ -356,7 +356,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl04()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[0][5].isVirado()){
+             if (inicioJogo || pctb[0][5].isVirado()){
                 idImg = pctb[0][5].getIdImagem();
                 ImageIcon img05 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl05()).setIcon(img05);
@@ -364,14 +364,14 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl05()).setIcon(imgDuvida);
             }
             
-            if (inicioJogo && pctb[1][0].isVirado()){
+            if (inicioJogo || pctb[1][0].isVirado()){
                 idImg = pctb[1][0].getIdImagem();
                 ImageIcon img10 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl10()).setIcon(img10);
             }else{
                 (jpi.getLbl10()).setIcon(imgDuvida);
             }
-              if (inicioJogo && pctb[1][1].isVirado()){
+              if (inicioJogo || pctb[1][1].isVirado()){
                 idImg = pctb[1][1].getIdImagem();
                 ImageIcon img11 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl11()).setIcon(img11);
@@ -379,7 +379,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl11()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][2].isVirado()){
+             if (inicioJogo || pctb[1][2].isVirado()){
                 idImg = pctb[1][2].getIdImagem();
                 ImageIcon img12 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl12()).setIcon(img12);
@@ -387,7 +387,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl12()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][3].isVirado()){
+             if (inicioJogo || pctb[1][3].isVirado()){
                 idImg = pctb[1][3].getIdImagem();
                 ImageIcon img13 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl13()).setIcon(img13);
@@ -395,7 +395,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl13()).setIcon(imgDuvida);
             }
              
-            if (inicioJogo && pctb[1][4].isVirado()){
+            if (inicioJogo || pctb[1][4].isVirado()){
                 idImg = pctb[1][4].getIdImagem();
                 ImageIcon img14 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl14()).setIcon(img14);
@@ -403,7 +403,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl14()).setIcon(imgDuvida);
             }
             
-            if (inicioJogo && pctb[1][5].isVirado()){
+            if (inicioJogo || pctb[1][5].isVirado()){
                 idImg = pctb[1][5].getIdImagem();
                 ImageIcon img15 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpi.getLbl15()).setIcon(img15);
@@ -411,7 +411,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl15()).setIcon(imgDuvida);
             }
             
-               if (!inicioJogo && pctb[2][0].isVirado()) {
+               if (inicioJogo || pctb[2][0].isVirado()) {
                 idImg = pctb[2][0].getIdImagem();
                 ImageIcon img20 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl20()).setIcon(img20);
@@ -419,7 +419,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl20()).setIcon(imgDuvida);
             }
             
-              if (!inicioJogo && pctb[2][1].isVirado()) {
+              if (inicioJogo || pctb[2][1].isVirado()) {
                 idImg = pctb[2][1].getIdImagem();
                 ImageIcon img21 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl21()).setIcon(img21);
@@ -427,7 +427,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl21()).setIcon(imgDuvida);
             }
              
-            if (!inicioJogo && pctb[2][2].isVirado()) {
+            if (inicioJogo || pctb[2][2].isVirado()) {
                 idImg = pctb[2][2].getIdImagem();
                 ImageIcon img22 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl22()).setIcon(img22);
@@ -435,7 +435,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl22()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[2][3].isVirado()) {
+            if (inicioJogo || pctb[2][3].isVirado()) {
                 idImg = pctb[2][3].getIdImagem();
                 ImageIcon img23 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl23()).setIcon(img23);
@@ -443,7 +443,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl23()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[2][4].isVirado()) {
+             if (inicioJogo || pctb[2][4].isVirado()) {
                 idImg = pctb[2][4].getIdImagem();
                 ImageIcon img24 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl24()).setIcon(img24);
@@ -451,7 +451,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl24()).setIcon(imgDuvida);
             }
              
-             if (!inicioJogo && pctb[2][5].isVirado()) {
+             if (inicioJogo || pctb[2][5].isVirado()) {
                 idImg = pctb[2][5].getIdImagem();
                 ImageIcon img25 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl25()).setIcon(img25);
@@ -459,7 +459,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl25()).setIcon(imgDuvida);
             }
              
-             if (!inicioJogo && pctb[3][0].isVirado()) {
+             if (inicioJogo || pctb[3][0].isVirado()) {
                 idImg = pctb[3][0].getIdImagem();
                 ImageIcon img30 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl30()).setIcon(img30);
@@ -467,7 +467,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl30()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][1].isVirado()) {
+            if (inicioJogo || pctb[3][1].isVirado()) {
                 idImg = pctb[3][1].getIdImagem();
                 ImageIcon img31 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl31()).setIcon(img31);
@@ -475,7 +475,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl31()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][2].isVirado()) {
+            if (inicioJogo || pctb[3][2].isVirado()) {
                 idImg = pctb[3][2].getIdImagem();
                 ImageIcon img32 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl32()).setIcon(img32);
@@ -483,7 +483,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl32()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][3].isVirado()) {
+            if (inicioJogo || pctb[3][3].isVirado()) {
                 idImg = pctb[3][3].getIdImagem();
                 ImageIcon img33 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl33()).setIcon(img33);
@@ -491,7 +491,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl33()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][4].isVirado()) {
+            if (inicioJogo || pctb[3][4].isVirado()) {
                 idImg = pctb[3][4].getIdImagem();
                 ImageIcon img34 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl34()).setIcon(img34);
@@ -499,7 +499,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl34()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][5].isVirado()) {
+            if (inicioJogo || pctb[3][5].isVirado()) {
                 idImg = pctb[3][5].getIdImagem();
                 ImageIcon img35 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl35()).setIcon(img35);
@@ -507,7 +507,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl35()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][0].isVirado()) {
+            if (inicioJogo || pctb[4][0].isVirado()) {
                 idImg = pctb[4][0].getIdImagem();
                 ImageIcon img40 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl40()).setIcon(img40);
@@ -515,7 +515,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl40()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][1].isVirado()) {
+            if (inicioJogo || pctb[4][1].isVirado()) {
                 idImg = pctb[4][1].getIdImagem();
                 ImageIcon img41 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl41()).setIcon(img41);
@@ -523,7 +523,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl41()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][2].isVirado()) {
+            if (inicioJogo || pctb[4][2].isVirado()) {
                 idImg = pctb[4][2].getIdImagem();
                 ImageIcon img42 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl42()).setIcon(img42);
@@ -531,7 +531,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl42()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][3].isVirado()) {
+            if (inicioJogo || pctb[4][3].isVirado()) {
                 idImg = pctb[4][3].getIdImagem();
                 ImageIcon img43 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl43()).setIcon(img43);
@@ -539,7 +539,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl43()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][4].isVirado()) {
+            if (inicioJogo || pctb[4][4].isVirado()) {
                 idImg = pctb[4][4].getIdImagem();
                 ImageIcon img44 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl44()).setIcon(img44);
@@ -547,7 +547,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl44()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][5].isVirado()) {
+            if (inicioJogo || pctb[4][5].isVirado()) {
                 idImg = pctb[4][5].getIdImagem();
                 ImageIcon img45 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl45()).setIcon(img45);
@@ -555,7 +555,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl45()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][0].isVirado()) {
+            if (inicioJogo || pctb[5][0].isVirado()) {
                 idImg = pctb[5][0].getIdImagem();
                 ImageIcon img50 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl50()).setIcon(img50);
@@ -563,7 +563,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl50()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][1].isVirado()) {
+            if (inicioJogo || pctb[5][1].isVirado()) {
                 idImg = pctb[5][1].getIdImagem();
                 ImageIcon img51 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl51()).setIcon(img51);
@@ -571,7 +571,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl51()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][2].isVirado()) {
+            if (inicioJogo || pctb[5][2].isVirado()) {
                 idImg = pctb[5][2].getIdImagem();
                 ImageIcon img52 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl52()).setIcon(img52);
@@ -579,7 +579,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl52()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][3].isVirado()) {
+            if (inicioJogo || pctb[5][3].isVirado()) {
                 idImg = pctb[5][3].getIdImagem();
                 ImageIcon img53 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl53()).setIcon(img53);
@@ -587,7 +587,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl53()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][4].isVirado()) {
+            if (inicioJogo || pctb[5][4].isVirado()) {
                 idImg = pctb[5][4].getIdImagem();
                 ImageIcon img54 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl54()).setIcon(img54);
@@ -595,7 +595,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpi.getLbl54()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][5].isVirado()) {
+            if (inicioJogo || pctb[5][5].isVirado()) {
                 idImg = pctb[5][5].getIdImagem();
                 ImageIcon img55 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpi.getLbl55()).setIcon(img55);
@@ -606,7 +606,7 @@ public class JogoMemoriaPrincipal extends JFrame {
             tb.getsppTabuleiro().setLeftComponent(jpi);
         }
         if(controle.DIFICIL == nivel){
-             if (inicioJogo && pctb[0][0].isVirado()){
+             if (inicioJogo || pctb[0][0].isVirado()){
                 idImg = pctb[0][0].getIdImagem();
                 ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl00()).setIcon(img00);
@@ -614,7 +614,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl00()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][1].isVirado()){
+             if (inicioJogo || pctb[0][1].isVirado()){
                 idImg = pctb[0][1].getIdImagem();
                 ImageIcon img01 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl01()).setIcon(img01);
@@ -622,7 +622,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl01()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][2].isVirado()){
+             if (inicioJogo || pctb[0][2].isVirado()){
                 idImg = pctb[0][2].getIdImagem();
                 ImageIcon img02 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl02()).setIcon(img02);
@@ -630,7 +630,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl02()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[0][3].isVirado()){
+             if (inicioJogo || pctb[0][3].isVirado()){
                 idImg = pctb[0][3].getIdImagem();
                 ImageIcon img03 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl03()).setIcon(img03);
@@ -638,7 +638,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl03()).setIcon(imgDuvida);
             }
              
-             if (inicioJogo && pctb[0][4].isVirado()){
+             if (inicioJogo || pctb[0][4].isVirado()){
                 idImg = pctb[0][4].getIdImagem();
                 ImageIcon img04 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl04()).setIcon(img04);
@@ -646,7 +646,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl04()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[0][5].isVirado()){
+             if (inicioJogo || pctb[0][5].isVirado()){
                 idImg = pctb[0][5].getIdImagem();
                 ImageIcon img05 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl05()).setIcon(img05);
@@ -654,14 +654,14 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl05()).setIcon(imgDuvida);
             }
             
-              if (inicioJogo && pctb[1][0].isVirado()){
+              if (inicioJogo || pctb[1][0].isVirado()){
                 idImg = pctb[1][0].getIdImagem();
                 ImageIcon img10 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl10()).setIcon(img10);
             }else{
                 (jpd.getLbl10()).setIcon(imgDuvida);
             }
-              if (inicioJogo && pctb[1][1].isVirado()){
+              if (inicioJogo || pctb[1][1].isVirado()){
                 idImg = pctb[1][1].getIdImagem();
                 ImageIcon img11 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl11()).setIcon(img11);
@@ -669,7 +669,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl11()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][2].isVirado()){
+             if (inicioJogo || pctb[1][2].isVirado()){
                 idImg = pctb[1][2].getIdImagem();
                 ImageIcon img12 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl12()).setIcon(img12);
@@ -677,7 +677,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl12()).setIcon(imgDuvida);
             }
             
-             if (inicioJogo && pctb[1][3].isVirado()){
+             if (inicioJogo || pctb[1][3].isVirado()){
                 idImg = pctb[1][3].getIdImagem();
                 ImageIcon img13 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl13()).setIcon(img13);
@@ -685,7 +685,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl13()).setIcon(imgDuvida);
             }
              
-            if (inicioJogo && pctb[1][4].isVirado()){
+            if (inicioJogo || pctb[1][4].isVirado()){
                 idImg = pctb[1][4].getIdImagem();
                 ImageIcon img14 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl14()).setIcon(img14);
@@ -693,7 +693,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl14()).setIcon(imgDuvida);
             }
             
-            if (inicioJogo && pctb[1][5].isVirado()){
+            if (inicioJogo || pctb[1][5].isVirado()){
                 idImg = pctb[1][5].getIdImagem();
                 ImageIcon img15 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
                 (jpd.getLbl15()).setIcon(img15);
@@ -701,7 +701,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl15()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[2][0].isVirado()) {
+             if (inicioJogo || pctb[2][0].isVirado()) {
                 idImg = pctb[2][0].getIdImagem();
                 ImageIcon img20 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl20()).setIcon(img20);
@@ -709,7 +709,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl20()).setIcon(imgDuvida);
             }
             
-              if (!inicioJogo && pctb[2][1].isVirado()) {
+              if (inicioJogo || pctb[2][1].isVirado()) {
                 idImg = pctb[2][1].getIdImagem();
                 ImageIcon img21 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl21()).setIcon(img21);
@@ -717,7 +717,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl21()).setIcon(imgDuvida);
             }
              
-            if (!inicioJogo && pctb[2][2].isVirado()) {
+            if (inicioJogo || pctb[2][2].isVirado()) {
                 idImg = pctb[2][2].getIdImagem();
                 ImageIcon img22 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl22()).setIcon(img22);
@@ -725,7 +725,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl22()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[2][3].isVirado()) {
+            if (inicioJogo || pctb[2][3].isVirado()) {
                 idImg = pctb[2][3].getIdImagem();
                 ImageIcon img23 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl23()).setIcon(img23);
@@ -733,7 +733,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl23()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[2][4].isVirado()) {
+             if (inicioJogo || pctb[2][4].isVirado()) {
                 idImg = pctb[2][4].getIdImagem();
                 ImageIcon img24 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl24()).setIcon(img24);
@@ -741,7 +741,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl24()).setIcon(imgDuvida);
             }
              
-             if (!inicioJogo && pctb[2][5].isVirado()) {
+             if (inicioJogo || pctb[2][5].isVirado()) {
                 idImg = pctb[2][5].getIdImagem();
                 ImageIcon img25 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl25()).setIcon(img25);
@@ -749,7 +749,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl25()).setIcon(imgDuvida);
             }
              
-             if (!inicioJogo && pctb[3][0].isVirado()) {
+             if (inicioJogo || pctb[3][0].isVirado()) {
                 idImg = pctb[3][0].getIdImagem();
                 ImageIcon img30 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl30()).setIcon(img30);
@@ -757,7 +757,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl30()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][1].isVirado()) {
+            if (inicioJogo || pctb[3][1].isVirado()) {
                 idImg = pctb[3][1].getIdImagem();
                 ImageIcon img31 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl31()).setIcon(img31);
@@ -765,7 +765,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl31()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][2].isVirado()) {
+            if (inicioJogo || pctb[3][2].isVirado()) {
                 idImg = pctb[3][2].getIdImagem();
                 ImageIcon img32 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl32()).setIcon(img32);
@@ -773,7 +773,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl32()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][3].isVirado()) {
+            if (inicioJogo || pctb[3][3].isVirado()) {
                 idImg = pctb[3][3].getIdImagem();
                 ImageIcon img33 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl33()).setIcon(img33);
@@ -781,7 +781,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl33()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][4].isVirado()) {
+            if (inicioJogo || pctb[3][4].isVirado()) {
                 idImg = pctb[3][4].getIdImagem();
                 ImageIcon img34 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl34()).setIcon(img34);
@@ -789,7 +789,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl34()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[3][5].isVirado()) {
+            if (inicioJogo || pctb[3][5].isVirado()) {
                 idImg = pctb[3][5].getIdImagem();
                 ImageIcon img35 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl35()).setIcon(img35);
@@ -797,7 +797,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl35()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[4][0].isVirado()) {
+             if (inicioJogo || pctb[4][0].isVirado()) {
                 idImg = pctb[4][0].getIdImagem();
                 ImageIcon img40 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl40()).setIcon(img40);
@@ -805,7 +805,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl40()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][1].isVirado()) {
+            if (inicioJogo || pctb[4][1].isVirado()) {
                 idImg = pctb[4][1].getIdImagem();
                 ImageIcon img41 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl41()).setIcon(img41);
@@ -813,7 +813,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl41()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][2].isVirado()) {
+            if (inicioJogo || pctb[4][2].isVirado()) {
                 idImg = pctb[4][2].getIdImagem();
                 ImageIcon img42 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl42()).setIcon(img42);
@@ -821,7 +821,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl42()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][3].isVirado()) {
+            if (inicioJogo || pctb[4][3].isVirado()) {
                 idImg = pctb[4][3].getIdImagem();
                 ImageIcon img43 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl43()).setIcon(img43);
@@ -829,7 +829,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl43()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][4].isVirado()) {
+            if (inicioJogo || pctb[4][4].isVirado()) {
                 idImg = pctb[4][4].getIdImagem();
                 ImageIcon img44 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl44()).setIcon(img44);
@@ -837,7 +837,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl44()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[4][5].isVirado()) {
+            if (inicioJogo || pctb[4][5].isVirado()) {
                 idImg = pctb[4][5].getIdImagem();
                 ImageIcon img45 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl45()).setIcon(img45);
@@ -845,7 +845,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl45()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][0].isVirado()) {
+            if (inicioJogo || pctb[5][0].isVirado()) {
                 idImg = pctb[5][0].getIdImagem();
                 ImageIcon img50 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl50()).setIcon(img50);
@@ -853,7 +853,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl50()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][1].isVirado()) {
+            if (inicioJogo || pctb[5][1].isVirado()) {
                 idImg = pctb[5][1].getIdImagem();
                 ImageIcon img51 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl51()).setIcon(img51);
@@ -861,7 +861,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl51()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][2].isVirado()) {
+            if (inicioJogo || pctb[5][2].isVirado()) {
                 idImg = pctb[5][2].getIdImagem();
                 ImageIcon img52 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl52()).setIcon(img52);
@@ -869,7 +869,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl52()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][3].isVirado()) {
+            if (inicioJogo || pctb[5][3].isVirado()) {
                 idImg = pctb[5][3].getIdImagem();
                 ImageIcon img53 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl53()).setIcon(img53);
@@ -877,7 +877,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl53()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][4].isVirado()) {
+            if (inicioJogo || pctb[5][4].isVirado()) {
                 idImg = pctb[5][4].getIdImagem();
                 ImageIcon img54 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl54()).setIcon(img54);
@@ -885,7 +885,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl54()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[5][5].isVirado()) {
+            if (inicioJogo || pctb[5][5].isVirado()) {
                 idImg = pctb[5][5].getIdImagem();
                 ImageIcon img55 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl55()).setIcon(img55);
@@ -893,7 +893,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl55()).setIcon(imgDuvida);
             }
              
-            if (!inicioJogo && pctb[6][0].isVirado()) {
+            if (inicioJogo || pctb[6][0].isVirado()) {
                 idImg = pctb[6][0].getIdImagem();
                 ImageIcon img60 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl60()).setIcon(img60);
@@ -901,7 +901,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl60()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[6][1].isVirado()) {
+            if (inicioJogo || pctb[6][1].isVirado()) {
                 idImg = pctb[6][1].getIdImagem();
                 ImageIcon img61 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl61()).setIcon(img61);
@@ -909,7 +909,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl61()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[6][2].isVirado()) {
+            if (inicioJogo || pctb[6][2].isVirado()) {
                 idImg = pctb[6][2].getIdImagem();
                 ImageIcon img62 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl62()).setIcon(img62);
@@ -917,7 +917,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl62()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[6][3].isVirado()) {
+            if (inicioJogo || pctb[6][3].isVirado()) {
                 idImg = pctb[6][3].getIdImagem();
                 ImageIcon img63 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl63()).setIcon(img63);
@@ -925,7 +925,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl63()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[6][4].isVirado()) {
+            if (inicioJogo || pctb[6][4].isVirado()) {
                 idImg = pctb[6][4].getIdImagem();
                 ImageIcon img64 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl64()).setIcon(img64);
@@ -933,7 +933,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl64()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[6][5].isVirado()) {
+            if (inicioJogo || pctb[6][5].isVirado()) {
                 idImg = pctb[6][5].getIdImagem();
                 ImageIcon img65 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl65()).setIcon(img65);
@@ -941,7 +941,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl65()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][0].isVirado()) {
+            if (inicioJogo || pctb[7][0].isVirado()) {
                 idImg = pctb[7][0].getIdImagem();
                 ImageIcon img70 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl70()).setIcon(img70);
@@ -949,7 +949,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl70()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][1].isVirado()) {
+            if (inicioJogo || pctb[7][1].isVirado()) {
                 idImg = pctb[7][1].getIdImagem();
                 ImageIcon img71 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl71()).setIcon(img71);
@@ -957,7 +957,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl71()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][2].isVirado()) {
+            if (inicioJogo || pctb[7][2].isVirado()) {
                 idImg = pctb[7][2].getIdImagem();
                 ImageIcon img72 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl72()).setIcon(img72);
@@ -965,7 +965,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl72()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][3].isVirado()) {
+            if (inicioJogo || pctb[7][3].isVirado()) {
                 idImg = pctb[7][3].getIdImagem();
                 ImageIcon img73 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl73()).setIcon(img73);
@@ -973,7 +973,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl73()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][4].isVirado()) {
+            if (inicioJogo || pctb[7][4].isVirado()) {
                 idImg = pctb[7][4].getIdImagem();
                 ImageIcon img74 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl74()).setIcon(img74);
@@ -981,7 +981,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl74()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[7][5].isVirado()) {
+            if (inicioJogo || pctb[7][5].isVirado()) {
                 idImg = pctb[7][5].getIdImagem();
                 ImageIcon img75 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl75()).setIcon(img75);
@@ -989,7 +989,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl75()).setIcon(imgDuvida);
             }
             
-             if (!inicioJogo && pctb[8][0].isVirado()) {
+             if (inicioJogo || pctb[8][0].isVirado()) {
                 idImg = pctb[8][0].getIdImagem();
                 ImageIcon img80 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl80()).setIcon(img80);
@@ -997,7 +997,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl80()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[8][1].isVirado()) {
+            if (inicioJogo || pctb[8][1].isVirado()) {
                 idImg = pctb[8][1].getIdImagem();
                 ImageIcon img81 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl81()).setIcon(img81);
@@ -1005,7 +1005,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl81()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[8][2].isVirado()) {
+            if (inicioJogo || pctb[8][2].isVirado()) {
                 idImg = pctb[8][2].getIdImagem();
                 ImageIcon img82 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl82()).setIcon(img82);
@@ -1013,7 +1013,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl82()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[8][3].isVirado()) {
+            if (inicioJogo || pctb[8][3].isVirado()) {
                 idImg = pctb[8][3].getIdImagem();
                 ImageIcon img83 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl83()).setIcon(img83);
@@ -1021,7 +1021,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl83()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[8][4].isVirado()) {
+            if (inicioJogo || pctb[8][4].isVirado()) {
                 idImg = pctb[8][4].getIdImagem();
                 ImageIcon img84 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl84()).setIcon(img84);
@@ -1029,7 +1029,7 @@ public class JogoMemoriaPrincipal extends JFrame {
                 (jpd.getLbl84()).setIcon(imgDuvida);
             }
             
-            if (!inicioJogo && pctb[8][5].isVirado()) {
+            if (inicioJogo || pctb[8][5].isVirado()) {
                 idImg = pctb[8][5].getIdImagem();
                 ImageIcon img85 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".png"));
                 (jpd.getLbl85()).setIcon(img85);
@@ -1042,8 +1042,8 @@ public class JogoMemoriaPrincipal extends JFrame {
             tb.getsppTabuleiro().setLeftComponent(jpd);
         }
         
-       /* sppPrincipal.setRightComponent(tb);
-         this.repaint(); */
+       sppPrincipal.setRightComponent(tb);
+         this.repaint(); 
         
     }
     /**
@@ -1071,6 +1071,6 @@ public class JogoMemoriaPrincipal extends JFrame {
     private javax.swing.JPanel pnl_Principal;
     private javax.swing.JPanel pnl_principal2;
     private javax.swing.JSpinner spn_tempo;
-    private javax.swing.JSplitPane spp_painel;
+    private javax.swing.JSplitPane sppPrincipal;
     // End of variables declaration//GEN-END:variables
 }

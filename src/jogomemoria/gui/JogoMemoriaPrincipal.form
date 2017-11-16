@@ -32,7 +32,7 @@
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
   <SubComponents>
-    <Container class="javax.swing.JSplitPane" name="spp_painel">
+    <Container class="javax.swing.JSplitPane" name="sppPrincipal">
       <Properties>
         <Property name="dividerLocation" type="int" value="45"/>
         <Property name="orientation" type="int" value="0"/>

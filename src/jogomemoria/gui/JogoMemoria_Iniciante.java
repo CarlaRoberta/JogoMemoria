@@ -49,7 +49,7 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.GridLayout(4, 4, 1, 1));
 
-        lbl00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         lbl00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbl00MouseClicked(evt);
@@ -57,54 +57,54 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         });
         add(lbl00);
 
-        lbl01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl01);
 
-        lbl02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl02);
 
-        lbl03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl03.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl03);
 
-        lbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl10);
 
-        lbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl11);
 
-        lbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl12);
 
-        lbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl13);
 
-        lbl20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl20);
 
-        lbl21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl21);
 
-        lbl22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl22);
 
-        lbl23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl23);
 
-        lbl30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl30);
 
-        lbl31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl31);
 
-        lbl32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl32);
 
-        lbl33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrogação.jpg"))); // NOI18N
+        lbl33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl33);
     }// </editor-fold>//GEN-END:initComponents
     
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
-       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpeg"));
+       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpg"));
         getLbl00().setIcon(image);
     }//GEN-LAST:event_lbl00MouseClicked
 
