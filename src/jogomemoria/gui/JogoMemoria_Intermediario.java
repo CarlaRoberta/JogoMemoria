@@ -23,8 +23,9 @@ public class JogoMemoria_Intermediario extends javax.swing.JPanel {
     PecaTabuleiro ptSel2; //2ª Peca de tabuleiro selecionada em cada jogada
     int pecasSelecionadas = 0; //Qtde de pecas de tabuleiro selecionadas num dado momento
 
-    public JogoMemoria_Intermediario() {
+    public JogoMemoria_Intermediario(JogoMemoriaCtrl ctrl) {
         initComponents();
+        controle = ctrl;
     }
 
     public void mostrar(boolean inicioJogo) {
@@ -763,71 +764,71 @@ public class JogoMemoria_Intermediario extends javax.swing.JPanel {
     }//GEN-LAST:event_lbl30MouseClicked
 
     private void lbl31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl31MouseClicked
-        tentarJogada(3, 0, lbl30);
+        tentarJogada(3, 1, lbl31);
     }//GEN-LAST:event_lbl31MouseClicked
 
     private void lbl32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl32MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 2, lbl32);
     }//GEN-LAST:event_lbl32MouseClicked
 
     private void lbl33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl33MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 3, lbl33);
     }//GEN-LAST:event_lbl33MouseClicked
 
     private void lbl34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl34MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 4, lbl34);
     }//GEN-LAST:event_lbl34MouseClicked
 
     private void lbl35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl35MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 5, lbl35);
     }//GEN-LAST:event_lbl35MouseClicked
 
     private void lbl40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl40MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 0, lbl40);
     }//GEN-LAST:event_lbl40MouseClicked
 
     private void lbl41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl41MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 1, lbl41);
     }//GEN-LAST:event_lbl41MouseClicked
 
     private void lbl42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl42MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 2, lbl42);
     }//GEN-LAST:event_lbl42MouseClicked
 
     private void lbl43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl43MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 3, lbl43);
     }//GEN-LAST:event_lbl43MouseClicked
 
     private void lbl44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl44MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 4, lbl44);
     }//GEN-LAST:event_lbl44MouseClicked
 
     private void lbl45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl45MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 5, lbl45);
     }//GEN-LAST:event_lbl45MouseClicked
 
     private void lbl50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl50MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 0, lbl50);
     }//GEN-LAST:event_lbl50MouseClicked
 
     private void lbl51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl51MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 1, lbl51);
     }//GEN-LAST:event_lbl51MouseClicked
 
     private void lbl52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl52MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 2, lbl52);
     }//GEN-LAST:event_lbl52MouseClicked
 
     private void lbl53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl53MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 3, lbl53);
     }//GEN-LAST:event_lbl53MouseClicked
 
     private void lbl54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl54MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 4, lbl54);
     }//GEN-LAST:event_lbl54MouseClicked
 
     private void lbl55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl55MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 5, lbl55);
     }//GEN-LAST:event_lbl55MouseClicked
 
 
