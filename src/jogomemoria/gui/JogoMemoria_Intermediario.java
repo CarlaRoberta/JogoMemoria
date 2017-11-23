@@ -5,15 +5,17 @@
  */
 package jogomemoria.gui;
 
+import jogomemoria.control.JogoMemoriaCtrl;
+
 /**
  *
  * @author Aluno
  */
 public class JogoMemoria_Intermediario extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JogoMemoria_Intermediario
-     */
+    
+    private JogoMemoriaCtrl controle;
+    
     public JogoMemoria_Intermediario() {
         initComponents();
     }
@@ -719,5 +721,8 @@ public class JogoMemoria_Intermediario extends javax.swing.JPanel {
      */
     public void setLbl55(javax.swing.JLabel lbl55) {
         this.lbl55 = lbl55;
+    }
+    public void setControle(JogoMemoriaCtrl controle) {
+        this.controle = controle;
     }
 }

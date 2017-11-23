@@ -6,6 +6,8 @@
 package jogomemoria.gui;
 
 import javax.swing.ImageIcon;
+import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.model.PecaTabuleiro;
 
 /**
  *
@@ -13,9 +15,12 @@ import javax.swing.ImageIcon;
  */
 public class JogoMemoria_Iniciante extends javax.swing.JPanel {
 
-    /**
-     * Creates new form JogoMemoria_Inciante
-     */
+    private JogoMemoriaCtrl controle;
+
+    int pecasSelecionadas = 0;
+
+    PecaTabuleiro pt1, pt2;
+
     public JogoMemoria_Iniciante() {
         initComponents();
     }
@@ -102,9 +107,9 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         lbl33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"))); // NOI18N
         add(lbl33);
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void lbl00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl00MouseClicked
-       ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpg"));
+        ImageIcon image = new ImageIcon(getClass().getResource("/JogoMemoria/gui/img/Jm1.jpg"));
         getLbl00().setIcon(image);
     }//GEN-LAST:event_lbl00MouseClicked
 
@@ -351,4 +356,16 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
     public void setLbl33(javax.swing.JLabel lbl33) {
         this.lbl33 = lbl33;
     }
+
+    public JogoMemoriaCtrl getControle() {
+        return controle;
+    }
+
+    /**
+     * @param controle the controle to set
+     */
+    public void setControle(JogoMemoriaCtrl controle) {
+        this.controle = controle;
+    }
+
 }

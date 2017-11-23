@@ -13,7 +13,9 @@ public class JogoMemoriaPrincipal extends JFrame {
     
     public JogoMemoriaPrincipal() {
         initComponents();
-        controle = new JogoMemoriaCtrl();
+        controle = new JogoMemoriaCtrl();        
+        jpf.setControle(controle);
+        jpi.setControle(controle);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
