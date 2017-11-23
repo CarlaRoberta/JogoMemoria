@@ -38,8 +38,8 @@ public class JogoMemoriaCtrl {
 
     public static final int QTDE_IMGS_DIFICIL = 18;
     public static final int QTDE_PECAS_TAB_DIFICIL = 54; //Referência para a qtde de peças do tabuleiro para o nível Difícil
-    public static final int MAX_COL_DIFICIL = 9; //Qtde de colunas no tabuleiro para o nível Difícil
-    public static final int MAX_LIN_DIFICIL = 6; //Qtde de linhas no tabuleiro para o nível Difícil
+    public static final int MAX_COL_DIFICIL = 6; //Qtde de colunas no tabuleiro para o nível Difícil
+    public static final int MAX_LIN_DIFICIL = 9; //Qtde de linhas no tabuleiro para o nível Difícil
 
     /* ----------------------- ATRIBUTOS -----------------------*/
     private boolean jogoIniciado; //Booleano que indica se a partida foi iniciada ou não.
@@ -96,22 +96,22 @@ public class JogoMemoriaCtrl {
         if (nivel == FACIL) {
             setNivelAtual(FACIL);
             qtdImgsPartida = QTDE_IMGS_FACIL;
-            linhaMax = MAX_LIN_FACIL;
-            colunaMax = MAX_COL_FACIL;
+            linhaMax = MAX_LIN_FACIL-1;
+            colunaMax = MAX_COL_FACIL-1;
             qtdePecasPorImg = 2;
         }
         if (nivel == INTERMEDIARIO) {
             setNivelAtual(INTERMEDIARIO);
             qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
-            linhaMax = MAX_LIN_INTERMEDIARIO;
-            colunaMax = MAX_COL_INTERMEDIARIO;
+            linhaMax = MAX_LIN_INTERMEDIARIO-1;
+            colunaMax = MAX_COL_INTERMEDIARIO-1;
             qtdePecasPorImg = 2;
         }
         if (nivel == DIFICIL) {
             setNivelAtual(DIFICIL);
             qtdImgsPartida = QTDE_IMGS_DIFICIL;
-            linhaMax = MAX_LIN_DIFICIL;
-            colunaMax = MAX_COL_DIFICIL;
+            linhaMax = MAX_LIN_DIFICIL-1;
+            colunaMax = MAX_COL_DIFICIL-1;
             qtdePecasPorImg = 3;
         }
 
@@ -231,8 +231,8 @@ public class JogoMemoriaCtrl {
                 int c;
                 boolean sucesso=false;
                 while(!sucesso ){
-                    l = obterNumSorteado(0,linhaMax -1);
-                    c = obterNumSorteado(0,colunaMax -1);
+                    l = obterNumSorteado(0,linhaMax);
+                    c = obterNumSorteado(0,colunaMax);
                     if (getTabuleiro()[l][c] == null){
                         p.setLinha(l);
                         p.setColuna(c);
@@ -295,7 +295,9 @@ public class JogoMemoriaCtrl {
         if (pt1.getIdImagem() == pt2.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
-                if ((!pt1.isVirado()) && (!pt2.isVirado())) {
+                if ((!pt1.isVirado()) && (!pt2.isVirado()) &&    //Se nenhuma das duas peças estao marcadas como virada no controle (já jogadas)
+                      pt1.getIdImagem() == pt2.getIdImagem() &&  //Se as imagens são iguais (mas pode ser igual se usuario clicou duas vezes na mesma celula
+                      (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna()) {  //Garante que a jogada comnsidera duas celulas diferente
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
                     pt1.setVirado(true);

@@ -1,21 +1,24 @@
 package jogomemoria.gui;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
 import jogomemoria.model.PecaTabuleiro;
 
 public class JogoMemoriaPrincipal extends JFrame {
     Tabuleiro tb = new Tabuleiro();
-    JogoMemoria_Iniciante jpf =new JogoMemoria_Iniciante();
-    JogoMemoria_Intermediario jpi =new JogoMemoria_Intermediario();
-    JogoMemoria_Dificil jpd =new JogoMemoria_Dificil();
+    JogoMemoria_Iniciante jpf;
+    JogoMemoria_Intermediario jpi;
+    JogoMemoria_Dificil jpd;
     private JogoMemoriaCtrl controle;
     
     public JogoMemoriaPrincipal() {
         initComponents();
         controle = new JogoMemoriaCtrl();        
-        jpf.setControle(controle);
-        jpi.setControle(controle);
+        jpf = new JogoMemoria_Iniciante(controle);
+//        jpi = new JogoMemoria_Iniciante(controle);
+//        jpd = new JogoMemoria_Iniciante(controle);
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -94,7 +97,7 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         sppPrincipal.setLeftComponent(pnl_Principal);
 
-        jogo.setBackground(new java.awt.Color(255, 255, 255));
+        jogo.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.jpg"))); // NOI18N
 
@@ -175,436 +178,28 @@ public class JogoMemoriaPrincipal extends JFrame {
         this.repaint();
         controle.iniciarPartida(nivelSelect, tempoLimite);
         mostrarTabuleiro(true);
+        int resp = JOptionPane.showConfirmDialog(this,"Pronto para Iniciar????", "Confirme inicio", JOptionPane.YES_NO_OPTION);
+        if (resp == JOptionPane.YES_OPTION)
+            mostrarTabuleiro(false);
+        
     }//GEN-LAST:event_btn_IniciarActionPerformed
  
         
     
     public void mostrarTabuleiro(boolean inicioJogo){
+      
         PecaTabuleiro pctb[][] =  controle.getTabuleiro();
         int idImg;
-        ImageIcon imgDuvida = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/interrog.jpg"));
+        ImageIcon imgDuvida = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/interrog.jpg"));    
+        
+        
         
         int nivel = controle.getNivelAtual();
         if(controle.FACIL == nivel){
-            
-            if (inicioJogo || pctb[0][0].isVirado()){
-                idImg = pctb[0][0].getIdImagem();
-                ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl00()).setIcon(img00);
-            }else{
-                (jpf.getLbl00()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[0][1].isVirado()){
-                idImg = pctb[0][1].getIdImagem();
-                ImageIcon img01 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl01()).setIcon(img01);
-            }else{
-                (jpf.getLbl01()).setIcon(imgDuvida);
-            }
-            
-              if (inicioJogo || pctb[0][2].isVirado()){
-                idImg = pctb[0][2].getIdImagem();
-                ImageIcon img02 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl02()).setIcon(img02);
-            }else{
-                (jpf.getLbl02()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[0][3].isVirado()){
-                idImg = pctb[0][3].getIdImagem();
-                ImageIcon img03 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl03()).setIcon(img03);
-            }else{
-                (jpf.getLbl03()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[1][0].isVirado()){
-                idImg = pctb[1][0].getIdImagem();
-                ImageIcon img10 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl10()).setIcon(img10);
-            }else{
-                (jpf.getLbl10()).setIcon(imgDuvida);
-            }
-              if (inicioJogo || pctb[1][1].isVirado()){
-                idImg = pctb[1][1].getIdImagem();
-                ImageIcon img11 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl11()).setIcon(img11);
-            }else{
-                (jpf.getLbl11()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[1][2].isVirado()){
-                idImg = pctb[1][2].getIdImagem();
-                ImageIcon img12 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl12()).setIcon(img12);
-            }else{
-                (jpf.getLbl12()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[1][3].isVirado()){
-                idImg = pctb[1][3].getIdImagem();
-                ImageIcon img13 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl13()).setIcon(img13);
-            }else{
-                (jpf.getLbl13()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[2][0].isVirado()) {
-                idImg = pctb[2][0].getIdImagem();
-                ImageIcon img20 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl20()).setIcon(img20);
-            } else {
-                (jpf.getLbl20()).setIcon(imgDuvida);
-            }
-            
-              if (inicioJogo || pctb[2][1].isVirado()) {
-                idImg = pctb[2][1].getIdImagem();
-                ImageIcon img21 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl21()).setIcon(img21);
-            } else {
-                (jpf.getLbl21()).setIcon(imgDuvida);
-            }
-             
-            if (inicioJogo || pctb[2][2].isVirado()) {
-                idImg = pctb[2][2].getIdImagem();
-                ImageIcon img22 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl22()).setIcon(img22);
-            } else {
-                (jpf.getLbl22()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[2][3].isVirado()) {
-                idImg = pctb[2][3].getIdImagem();
-                ImageIcon img23 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl23()).setIcon(img23);
-            } else {
-                (jpf.getLbl23()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][0].isVirado()) {
-                idImg = pctb[3][0].getIdImagem();
-                ImageIcon img30 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl30()).setIcon(img30);
-            } else {
-                (jpf.getLbl30()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][1].isVirado()) {
-                idImg = pctb[3][1].getIdImagem();
-                ImageIcon img31 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl31()).setIcon(img31);
-            } else {
-                (jpf.getLbl31()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][2].isVirado()) {
-                idImg = pctb[3][2].getIdImagem();
-                ImageIcon img32 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl32()).setIcon(img32);
-            } else {
-                (jpf.getLbl32()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][3].isVirado()) {
-                idImg = pctb[3][3].getIdImagem();
-                ImageIcon img33 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpf.getLbl33()).setIcon(img33);
-            } else {
-                (jpf.getLbl33()).setIcon(imgDuvida);
-            }
-            
-            
             tb.getsppTabuleiro().setLeftComponent(jpf);            
+            jpf.mostrar(inicioJogo);
         }
         if(controle.INTERMEDIARIO == nivel){
-             if (inicioJogo || pctb[0][0].isVirado()){
-                idImg = pctb[0][0].getIdImagem();
-                ImageIcon img00 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl00()).setIcon(img00);
-            }else{
-                (jpi.getLbl00()).setIcon(imgDuvida);
-            }
-             
-             if (inicioJogo || pctb[0][1].isVirado()){
-                idImg = pctb[0][1].getIdImagem();
-                ImageIcon img01 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl01()).setIcon(img01);
-            }else{
-                (jpi.getLbl01()).setIcon(imgDuvida);
-            }
-             
-             if (inicioJogo || pctb[0][2].isVirado()){
-                idImg = pctb[0][2].getIdImagem();
-                ImageIcon img02 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl02()).setIcon(img02);
-            }else{
-                (jpi.getLbl02()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[0][3].isVirado()){
-                idImg = pctb[0][3].getIdImagem();
-                ImageIcon img03 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl03()).setIcon(img03);
-            }else{
-                (jpi.getLbl03()).setIcon(imgDuvida);
-            }
-             
-             if (inicioJogo || pctb[0][4].isVirado()){
-                idImg = pctb[0][4].getIdImagem();
-                ImageIcon img04 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl04()).setIcon(img04);
-            }else{
-                (jpi.getLbl04()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[0][5].isVirado()){
-                idImg = pctb[0][5].getIdImagem();
-                ImageIcon img05 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl05()).setIcon(img05);
-            }else{
-                (jpi.getLbl05()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[1][0].isVirado()){
-                idImg = pctb[1][0].getIdImagem();
-                ImageIcon img10 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl10()).setIcon(img10);
-            }else{
-                (jpi.getLbl10()).setIcon(imgDuvida);
-            }
-              if (inicioJogo || pctb[1][1].isVirado()){
-                idImg = pctb[1][1].getIdImagem();
-                ImageIcon img11 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl11()).setIcon(img11);
-            }else{
-                (jpi.getLbl11()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[1][2].isVirado()){
-                idImg = pctb[1][2].getIdImagem();
-                ImageIcon img12 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl12()).setIcon(img12);
-            }else{
-                (jpi.getLbl12()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[1][3].isVirado()){
-                idImg = pctb[1][3].getIdImagem();
-                ImageIcon img13 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl13()).setIcon(img13);
-            }else{
-                (jpi.getLbl13()).setIcon(imgDuvida);
-            }
-             
-            if (inicioJogo || pctb[1][4].isVirado()){
-                idImg = pctb[1][4].getIdImagem();
-                ImageIcon img14 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl14()).setIcon(img14);
-            }else{
-                (jpi.getLbl14()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[1][5].isVirado()){
-                idImg = pctb[1][5].getIdImagem();
-                ImageIcon img15 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl15()).setIcon(img15);
-            }else{
-                (jpi.getLbl15()).setIcon(imgDuvida);
-            }
-            
-               if (inicioJogo || pctb[2][0].isVirado()) {
-                idImg = pctb[2][0].getIdImagem();
-                ImageIcon img20 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl20()).setIcon(img20);
-            } else {
-                (jpi.getLbl20()).setIcon(imgDuvida);
-            }
-            
-              if (inicioJogo || pctb[2][1].isVirado()) {
-                idImg = pctb[2][1].getIdImagem();
-                ImageIcon img21 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl21()).setIcon(img21);
-            } else {
-                (jpi.getLbl21()).setIcon(imgDuvida);
-            }
-             
-            if (inicioJogo || pctb[2][2].isVirado()) {
-                idImg = pctb[2][2].getIdImagem();
-                ImageIcon img22 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl22()).setIcon(img22);
-            } else {
-                (jpi.getLbl22()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[2][3].isVirado()) {
-                idImg = pctb[2][3].getIdImagem();
-                ImageIcon img23 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl23()).setIcon(img23);
-            } else {
-                (jpi.getLbl23()).setIcon(imgDuvida);
-            }
-            
-             if (inicioJogo || pctb[2][4].isVirado()) {
-                idImg = pctb[2][4].getIdImagem();
-                ImageIcon img24 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl24()).setIcon(img24);
-            } else {
-                (jpi.getLbl24()).setIcon(imgDuvida);
-            }
-             
-             if (inicioJogo || pctb[2][5].isVirado()) {
-                idImg = pctb[2][5].getIdImagem();
-                ImageIcon img25 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl25()).setIcon(img25);
-            } else {
-                (jpi.getLbl25()).setIcon(imgDuvida);
-            }
-             
-             if (inicioJogo || pctb[3][0].isVirado()) {
-                idImg = pctb[3][0].getIdImagem();
-                ImageIcon img30 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl30()).setIcon(img30);
-            } else {
-                (jpi.getLbl30()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][1].isVirado()) {
-                idImg = pctb[3][1].getIdImagem();
-                ImageIcon img31 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl31()).setIcon(img31);
-            } else {
-                (jpi.getLbl31()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][2].isVirado()) {
-                idImg = pctb[3][2].getIdImagem();
-                ImageIcon img32 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl32()).setIcon(img32);
-            } else {
-                (jpi.getLbl32()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][3].isVirado()) {
-                idImg = pctb[3][3].getIdImagem();
-                ImageIcon img33 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl33()).setIcon(img33);
-            } else {
-                (jpi.getLbl33()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][4].isVirado()) {
-                idImg = pctb[3][4].getIdImagem();
-                ImageIcon img34 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl34()).setIcon(img34);
-            } else {
-                (jpi.getLbl34()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[3][5].isVirado()) {
-                idImg = pctb[3][5].getIdImagem();
-                ImageIcon img35 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl35()).setIcon(img35);
-            } else {
-                (jpi.getLbl35()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][0].isVirado()) {
-                idImg = pctb[4][0].getIdImagem();
-                ImageIcon img40 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl40()).setIcon(img40);
-            } else {
-                (jpi.getLbl40()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][1].isVirado()) {
-                idImg = pctb[4][1].getIdImagem();
-                ImageIcon img41 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl41()).setIcon(img41);
-            } else {
-                (jpi.getLbl41()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][2].isVirado()) {
-                idImg = pctb[4][2].getIdImagem();
-                ImageIcon img42 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl42()).setIcon(img42);
-            } else {
-                (jpi.getLbl42()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][3].isVirado()) {
-                idImg = pctb[4][3].getIdImagem();
-                ImageIcon img43 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl43()).setIcon(img43);
-            } else {
-                (jpi.getLbl43()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][4].isVirado()) {
-                idImg = pctb[4][4].getIdImagem();
-                ImageIcon img44 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl44()).setIcon(img44);
-            } else {
-                (jpi.getLbl44()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[4][5].isVirado()) {
-                idImg = pctb[4][5].getIdImagem();
-                ImageIcon img45 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl45()).setIcon(img45);
-            } else {
-                (jpi.getLbl45()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][0].isVirado()) {
-                idImg = pctb[5][0].getIdImagem();
-                ImageIcon img50 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl50()).setIcon(img50);
-            } else {
-                (jpi.getLbl50()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][1].isVirado()) {
-                idImg = pctb[5][1].getIdImagem();
-                ImageIcon img51 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl51()).setIcon(img51);
-            } else {
-                (jpi.getLbl51()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][2].isVirado()) {
-                idImg = pctb[5][2].getIdImagem();
-                ImageIcon img52 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl52()).setIcon(img52);
-            } else {
-                (jpi.getLbl52()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][3].isVirado()) {
-                idImg = pctb[5][3].getIdImagem();
-                ImageIcon img53 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl53()).setIcon(img53);
-            } else {
-                (jpi.getLbl53()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][4].isVirado()) {
-                idImg = pctb[5][4].getIdImagem();
-                ImageIcon img54 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl54()).setIcon(img54);
-            } else {
-                (jpi.getLbl54()).setIcon(imgDuvida);
-            }
-            
-            if (inicioJogo || pctb[5][5].isVirado()) {
-                idImg = pctb[5][5].getIdImagem();
-                ImageIcon img55 = new ImageIcon (getClass().getResource("/jogomemoria/gui/img/jm"+idImg+".jpg"));
-                (jpi.getLbl55()).setIcon(img55);
-            } else {
-                (jpi.getLbl55()).setIcon(imgDuvida);
-            }
-            
             tb.getsppTabuleiro().setLeftComponent(jpi);
         }
         if(controle.DIFICIL == nivel){
