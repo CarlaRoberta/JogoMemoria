@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.gui.msc.Sound;
 import jogomemoria.model.PecaTabuleiro;
 
 public class JogoMemoria_Dificil extends javax.swing.JPanel {
@@ -30,7 +31,7 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
         PecaTabuleiro pctb[][] = controle.getTabuleiro();
         int idImg;
         ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"));
-        
+
         if (inicioJogo || pctb[0][0].isVirado()) {
             idImg = pctb[0][0].getIdImagem();
             ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
@@ -480,10 +481,13 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
             ptSel3 = pt[linha][coluna];
             int result = controle.realizarJogada(ptSel1, ptSel2, ptSel3);
             if (result == controle.JOGADA_CERTA) {
+                Sound.CERTO.play();
                 JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_ERRADA) {
+                Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
+                Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
             pecasSelecionadas = 0;

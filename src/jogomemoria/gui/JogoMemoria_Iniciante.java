@@ -181,10 +181,11 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             if (result == controle.JOGADA_CERTA) {
                 Sound.CERTO.play();
                 JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
-                Sound.CERTO.stop();
             } else if (result == controle.JOGADA_ERRADA) {
+                Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
+                Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
             pecasSelecionadas = 0;
