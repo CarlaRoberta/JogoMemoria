@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.gui.msc.Sound;
 import jogomemoria.model.PecaTabuleiro;
 
 /**
@@ -178,7 +179,9 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             ptSel2 = pt[linha][coluna];
             int result = controle.realizarJogada(ptSel1, ptSel2);
             if (result == controle.JOGADA_CERTA) {
+                Sound.CERTO.play();
                 JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                Sound.CERTO.stop();
             } else if (result == controle.JOGADA_ERRADA) {
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
