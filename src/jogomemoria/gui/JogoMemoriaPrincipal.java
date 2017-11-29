@@ -4,6 +4,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.gui.msc.Sound;
 import jogomemoria.model.PecaTabuleiro;
 
 public class JogoMemoriaPrincipal extends JFrame {
@@ -164,7 +165,8 @@ public class JogoMemoriaPrincipal extends JFrame {
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
         String item = (String) cmb_niveis.getSelectedItem();
         int nivelSelect = 0;
-
+          
+        //Sound.FIMDEJOGO.play();
         if (item.equals("Facil")) {
             nivelSelect = controle.FACIL;
             this.setSize(900, 800);
@@ -183,9 +185,11 @@ public class JogoMemoriaPrincipal extends JFrame {
         int resp = JOptionPane.showConfirmDialog(this, "Pronto para Iniciar????", "Confirme inicio", JOptionPane.YES_NO_OPTION);
         if (resp == JOptionPane.YES_OPTION) {
             mostrarTabuleiro(false);
+            Sound.ABERTURA.play();
         }
 
     }//GEN-LAST:event_btn_IniciarActionPerformed
+   
 
     public void mostrarTabuleiro(boolean inicioJogo) {
 

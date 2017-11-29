@@ -30,6 +30,7 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
         PecaTabuleiro pctb[][] = controle.getTabuleiro();
         int idImg;
         ImageIcon imgDuvida = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/interrog.jpg"));
+        
         if (inicioJogo || pctb[0][0].isVirado()) {
             idImg = pctb[0][0].getIdImagem();
             ImageIcon img00 = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
@@ -479,9 +480,9 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
             ptSel3 = pt[linha][coluna];
             int result = controle.realizarJogada(ptSel1, ptSel2, ptSel3);
             if (result == controle.JOGADA_CERTA) {
-           //     JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_ERRADA) {
-             //   JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
@@ -995,11 +996,11 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
-        tentarJogada(0, 2, lbl01);
+        tentarJogada(0, 2, lbl02);
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl03MouseClicked
-        tentarJogada(0, 3, lbl02);
+        tentarJogada(0, 3, lbl03);
     }//GEN-LAST:event_lbl03MouseClicked
 
     private void lbl04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl04MouseClicked
@@ -1123,11 +1124,11 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
     }//GEN-LAST:event_lbl53MouseClicked
 
     private void lbl54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl54MouseClicked
-        tentarJogada(5, 4, lbl53);
+        tentarJogada(5, 4, lbl54);
     }//GEN-LAST:event_lbl54MouseClicked
 
     private void lbl55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl55MouseClicked
-        tentarJogada(5, 5, lbl54);
+        tentarJogada(5, 5, lbl55);
     }//GEN-LAST:event_lbl55MouseClicked
 
     private void lbl60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl60MouseClicked
@@ -1135,19 +1136,19 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
     }//GEN-LAST:event_lbl60MouseClicked
 
     private void lbl61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl61MouseClicked
-        tentarJogada(6, 1, lbl00);
+        tentarJogada(6, 1, lbl61);
     }//GEN-LAST:event_lbl61MouseClicked
 
     private void lbl62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl62MouseClicked
-        tentarJogada(6, 2, lbl00);
+        tentarJogada(6, 2, lbl62);
     }//GEN-LAST:event_lbl62MouseClicked
 
     private void lbl63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl63MouseClicked
-        tentarJogada(6, 3, lbl00);
+        tentarJogada(6, 3, lbl63);
     }//GEN-LAST:event_lbl63MouseClicked
 
     private void lbl64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl64MouseClicked
-        tentarJogada(6, 4, lbl00);
+        tentarJogada(6, 4, lbl64);
     }//GEN-LAST:event_lbl64MouseClicked
 
     private void lbl65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl65MouseClicked
