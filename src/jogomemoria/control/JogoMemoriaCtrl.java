@@ -57,7 +57,7 @@ public class JogoMemoriaCtrl {
     private int[] imgsPartida = new int[MAX_IMAGENS_PARTIDA];//Vetor de imagens sorteadas para a partida atual. Considera o tamanho suficiente para o nível difícil
     private int qtdImgsPartida; //Quantidade de imgens usadas na partida. Controla o uso de células do vetor imgsPartida conforme o nível da partida atual.           
     private PecaTabuleiro tabuleiro[][] = new PecaTabuleiro[MAX_LIN_DIFICIL][MAX_COL_DIFICIL]; //Matriz que implementa o tabuleiro do jogo onde as imagens estão distribuidas. Considera o tamanho máximo possível de ser usado que é para o nível difícil. Cada célula contém um número referente à imagem que ocupará a posição.
-   
+
     /* ----------------------- MÉTODOS -----------------------*/
     /**
      * Construtor para a classe
@@ -67,6 +67,11 @@ public class JogoMemoriaCtrl {
         tempoLimite = INDEFINIDO;
         acertosPartida = INDEFINIDO;
         nivelAtual = INDEFINIDO;
+        pontuacaoAtual = 0;
+        int recordeFacil = 0;
+        int recordeIntermediario = 0;
+        int recordeDificil = 0;
+
         qtdImgsPartida = INDEFINIDO;
         /*ATIVIDADE #1 - Implementar um construtor para esta classe. Ele deve
          iniciar todos os atributos pertinentes, da seguinte forma:
@@ -96,29 +101,28 @@ public class JogoMemoriaCtrl {
         if (nivel == FACIL) {
             setNivelAtual(FACIL);
             qtdImgsPartida = QTDE_IMGS_FACIL;
-            linhaMax = MAX_LIN_FACIL-1;
-            colunaMax = MAX_COL_FACIL-1;
+            linhaMax = MAX_LIN_FACIL - 1;
+            colunaMax = MAX_COL_FACIL - 1;
             qtdePecasPorImg = 2;
         }
         if (nivel == INTERMEDIARIO) {
             setNivelAtual(INTERMEDIARIO);
             qtdImgsPartida = QTDE_IMGS_INTERMEDIARIO;
-            linhaMax = MAX_LIN_INTERMEDIARIO-1;
-            colunaMax = MAX_COL_INTERMEDIARIO-1;
+            linhaMax = MAX_LIN_INTERMEDIARIO - 1;
+            colunaMax = MAX_COL_INTERMEDIARIO - 1;
             qtdePecasPorImg = 2;
         }
         if (nivel == DIFICIL) {
             setNivelAtual(DIFICIL);
             qtdImgsPartida = QTDE_IMGS_DIFICIL;
-            linhaMax = MAX_LIN_DIFICIL-1;
-            colunaMax = MAX_COL_DIFICIL-1;
+            linhaMax = MAX_LIN_DIFICIL - 1;
+            colunaMax = MAX_COL_DIFICIL - 1;
             qtdePecasPorImg = 3;
         }
 
         sortearImagensPartida();
 
         preencherTabuleiro(nivel);
-
 
     }
 
@@ -205,7 +209,7 @@ public class JogoMemoriaCtrl {
             imgsPartida[i] = 0;
         }
 
-       //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
+        //ATIVIDADE #3.1 implementar laço para percorrer as células do vetor 
         //imgsPartida[] e atribuir o valor 0 (ZERO)  a cada célula.  
     }
 
@@ -214,7 +218,7 @@ public class JogoMemoriaCtrl {
      * dependendo do nível definido para a partida.
      */
     private void preencherTabuleiro(int nivel) {
-       
+
         int num = 0;
 
         limparTabuleiro();
@@ -229,18 +233,18 @@ public class JogoMemoriaCtrl {
                 p.setVirado(false);
                 int l;
                 int c;
-                boolean sucesso=false;
-                while(!sucesso ){
-                    l = obterNumSorteado(0,linhaMax);
-                    c = obterNumSorteado(0,colunaMax);
-                    if (getTabuleiro()[l][c] == null){
+                boolean sucesso = false;
+                while (!sucesso) {
+                    l = obterNumSorteado(0, linhaMax);
+                    c = obterNumSorteado(0, colunaMax);
+                    if (getTabuleiro()[l][c] == null) {
                         p.setLinha(l);
                         p.setColuna(c);
-                        getTabuleiro()[l][c]= p;
-                        sucesso=true;
+                        getTabuleiro()[l][c] = p;
+                        sucesso = true;
                     }
                 }
-            }        
+            }
         }
     }
     /*
@@ -272,7 +276,7 @@ public class JogoMemoriaCtrl {
                 // tabControle[l][c]=0;
             }
         }
-       //ATIVIDADE #4.1.
+        //ATIVIDADE #4.1.
         //implementar laços para percorrer as células das matrizes 
         //tabuleiro[][] e tabControle[][], atribuindo o valor 0 (ZERO)  a cada célula.
 
@@ -295,9 +299,9 @@ public class JogoMemoriaCtrl {
         if (pt1.getIdImagem() == pt2.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
-                if ((!pt1.isVirado()) && (!pt2.isVirado()) &&    //Se nenhuma das duas peças estao marcadas como virada no controle (já jogadas)
-                      pt1.getIdImagem() == pt2.getIdImagem() &&  //Se as imagens são iguais (mas pode ser igual se usuario clicou duas vezes na mesma celula
-                      (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna()) {  //Garante que a jogada comnsidera duas celulas diferente
+                if ((!pt1.isVirado()) && (!pt2.isVirado()) && //Se nenhuma das duas peças estao marcadas como virada no controle (já jogadas)
+                        pt1.getIdImagem() == pt2.getIdImagem() && //Se as imagens são iguais (mas pode ser igual se usuario clicou duas vezes na mesma celula
+                        (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna()) {  //Garante que a jogada comnsidera duas celulas diferente
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
                     pt1.setVirado(true);
@@ -312,7 +316,7 @@ public class JogoMemoriaCtrl {
         //Na tela teremos condições de fazer ela se comportar 
         //em função do valor que este método retornar. 
     }
-        //O resultado inicia pessimista. Estratégia definida pelo professor.
+    //O resultado inicia pessimista. Estratégia definida pelo professor.
 
     /*
      ATIVIDADE #5. Implemente este método de forma que ele realizar uma jogada
@@ -347,7 +351,7 @@ public class JogoMemoriaCtrl {
      */
     public int realizarJogada(PecaTabuleiro pt1, PecaTabuleiro pt2, PecaTabuleiro pt3) {
         int resultado = JOGADA_ERRADA;
-            if (pt1.getIdImagem() == pt2.getIdImagem() && (pt1.getIdImagem()== pt3.getIdImagem())) {
+        if (pt1.getIdImagem() == pt2.getIdImagem() && (pt1.getIdImagem() == pt3.getIdImagem())) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)
                     && (pt3.getLinha() <= linhaMax) && (pt3.getColuna() <= colunaMax)) {
@@ -419,6 +423,18 @@ public class JogoMemoriaCtrl {
      */
     public void setPontuacaoAtual(int pontuacaoAtual) {
         this.pontuacaoAtual = pontuacaoAtual;
+        if (pontuacaoAtual >= OURO) {
+            tabRecordes[getNivelAtual()][OURO] = pontuacaoAtual;
+        } else {
+            if (pontuacaoAtual >= PRATA) {
+                tabRecordes[getNivelAtual()][PRATA] = pontuacaoAtual;
+            } else {
+                if (pontuacaoAtual >= BRONZE) {
+                    tabRecordes[getNivelAtual()][BRONZE] = pontuacaoAtual;
+                }
+            }
+        }
+
     }
 
     /**

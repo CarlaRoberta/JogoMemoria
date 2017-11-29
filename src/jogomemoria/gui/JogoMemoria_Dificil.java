@@ -17,6 +17,8 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
 
     PecaTabuleiro ptSel1; //1ª Peca de tabuleiro selecionada em cada jogada
     PecaTabuleiro ptSel2; //2ª Peca de tabuleiro selecionada em cada jogada
+    PecaTabuleiro ptSel3; //3ª Peca de tabuleiro selecionada em cada jogada
+
     int pecasSelecionadas = 0; //Qtde de pecas de tabuleiro selecionadas num dado momento
 
     public JogoMemoria_Dificil(JogoMemoriaCtrl ctrl) {
@@ -472,11 +474,14 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
             pecasSelecionadas++;
         } else if (pecasSelecionadas == 1) {
             ptSel2 = pt[linha][coluna];
-            int result = controle.realizarJogada(ptSel1, ptSel2);
+            pecasSelecionadas++;
+        } else if (pecasSelecionadas == 2) {
+            ptSel3 = pt[linha][coluna];
+            int result = controle.realizarJogada(ptSel1, ptSel2, ptSel3);
             if (result == controle.JOGADA_CERTA) {
-                JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+           //     JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_ERRADA) {
-                JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+             //   JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
@@ -485,6 +490,7 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
         }
 
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
