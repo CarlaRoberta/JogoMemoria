@@ -985,215 +985,215 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
     }//GEN-LAST:event_lbl00MouseClicked
 
     private void lbl01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl01MouseClicked
-        tentarJogada(0, 0, lbl00);
+        tentarJogada(0, 1, lbl01);
     }//GEN-LAST:event_lbl01MouseClicked
 
     private void lbl02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl02MouseClicked
-        tentarJogada(0, 0, lbl00);
+        tentarJogada(0, 2, lbl01);
     }//GEN-LAST:event_lbl02MouseClicked
 
     private void lbl03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl03MouseClicked
-        tentarJogada(0, 0, lbl00);
+        tentarJogada(0, 3, lbl02);
     }//GEN-LAST:event_lbl03MouseClicked
 
     private void lbl04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl04MouseClicked
-        tentarJogada(0, 0, lbl00);
+        tentarJogada(0, 4, lbl04);
     }//GEN-LAST:event_lbl04MouseClicked
 
     private void lbl05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl05MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(0, 5, lbl05);
     }//GEN-LAST:event_lbl05MouseClicked
 
     private void lbl10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl10MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 0, lbl10);
     }//GEN-LAST:event_lbl10MouseClicked
 
     private void lbl11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl11MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 1, lbl11);
     }//GEN-LAST:event_lbl11MouseClicked
 
     private void lbl12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl12MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 2, lbl12);
     }//GEN-LAST:event_lbl12MouseClicked
 
     private void lbl13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl13MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 3, lbl13);
     }//GEN-LAST:event_lbl13MouseClicked
 
     private void lbl14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl14MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 4, lbl14);
     }//GEN-LAST:event_lbl14MouseClicked
 
     private void lbl15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl15MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(1, 5, lbl15);
     }//GEN-LAST:event_lbl15MouseClicked
 
     private void lbl20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl20MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 0, lbl20);
     }//GEN-LAST:event_lbl20MouseClicked
 
     private void lbl21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl21MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 1, lbl21);
     }//GEN-LAST:event_lbl21MouseClicked
 
     private void lbl22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl22MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 2, lbl22);
     }//GEN-LAST:event_lbl22MouseClicked
 
     private void lbl23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl23MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 3, lbl23);
     }//GEN-LAST:event_lbl23MouseClicked
 
     private void lbl24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl24MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 4, lbl24);
     }//GEN-LAST:event_lbl24MouseClicked
 
     private void lbl25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl25MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(2, 5, lbl25);
     }//GEN-LAST:event_lbl25MouseClicked
 
     private void lbl30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl30MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 0, lbl30);
     }//GEN-LAST:event_lbl30MouseClicked
 
     private void lbl31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl31MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 1, lbl31);
     }//GEN-LAST:event_lbl31MouseClicked
 
     private void lbl32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl32MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 2, lbl32);
     }//GEN-LAST:event_lbl32MouseClicked
 
     private void lbl33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl33MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 3, lbl33);
     }//GEN-LAST:event_lbl33MouseClicked
 
     private void lbl34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl34MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 4, lbl34);
     }//GEN-LAST:event_lbl34MouseClicked
 
     private void lbl35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl35MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(3, 5, lbl35);
     }//GEN-LAST:event_lbl35MouseClicked
 
     private void lbl40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl40MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 0, lbl40);
     }//GEN-LAST:event_lbl40MouseClicked
 
     private void lbl41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl41MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 1, lbl41);
     }//GEN-LAST:event_lbl41MouseClicked
 
     private void lbl42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl42MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 2, lbl42);
     }//GEN-LAST:event_lbl42MouseClicked
 
     private void lbl43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl43MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 3, lbl43);
     }//GEN-LAST:event_lbl43MouseClicked
 
     private void lbl44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl44MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 4, lbl44);
     }//GEN-LAST:event_lbl44MouseClicked
 
     private void lbl45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl45MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(4, 5, lbl45);
     }//GEN-LAST:event_lbl45MouseClicked
 
     private void lbl50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl50MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 0, lbl50);
     }//GEN-LAST:event_lbl50MouseClicked
 
     private void lbl51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl51MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 1, lbl51);
     }//GEN-LAST:event_lbl51MouseClicked
 
     private void lbl52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl52MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 2, lbl52);
     }//GEN-LAST:event_lbl52MouseClicked
 
     private void lbl53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl53MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 3, lbl53);
     }//GEN-LAST:event_lbl53MouseClicked
 
     private void lbl54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl54MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 4, lbl53);
     }//GEN-LAST:event_lbl54MouseClicked
 
     private void lbl55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl55MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(5, 5, lbl54);
     }//GEN-LAST:event_lbl55MouseClicked
 
     private void lbl60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl60MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 0, lbl60);
     }//GEN-LAST:event_lbl60MouseClicked
 
     private void lbl61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl61MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 1, lbl00);
     }//GEN-LAST:event_lbl61MouseClicked
 
     private void lbl62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl62MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 2, lbl00);
     }//GEN-LAST:event_lbl62MouseClicked
 
     private void lbl63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl63MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 3, lbl00);
     }//GEN-LAST:event_lbl63MouseClicked
 
     private void lbl64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl64MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 4, lbl00);
     }//GEN-LAST:event_lbl64MouseClicked
 
     private void lbl65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl65MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(6, 5, lbl65);
     }//GEN-LAST:event_lbl65MouseClicked
 
     private void lbl70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl70MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 0, lbl70);
     }//GEN-LAST:event_lbl70MouseClicked
 
     private void lbl71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl71MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 1, lbl71);
     }//GEN-LAST:event_lbl71MouseClicked
 
     private void lbl72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl72MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 2, lbl72);
     }//GEN-LAST:event_lbl72MouseClicked
 
     private void lbl73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl73MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 3, lbl73);
     }//GEN-LAST:event_lbl73MouseClicked
 
     private void lbl74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl74MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 4, lbl74);
     }//GEN-LAST:event_lbl74MouseClicked
 
     private void lbl75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl75MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(7, 5, lbl75);
     }//GEN-LAST:event_lbl75MouseClicked
 
     private void lbl80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl80MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 0, lbl80);
     }//GEN-LAST:event_lbl80MouseClicked
 
     private void lbl81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl81MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 1, lbl81);
     }//GEN-LAST:event_lbl81MouseClicked
 
     private void lbl82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl82MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 2, lbl82);
     }//GEN-LAST:event_lbl82MouseClicked
 
     private void lbl83MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl83MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 3, lbl83);
     }//GEN-LAST:event_lbl83MouseClicked
 
     private void lbl84MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl84MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 4, lbl84);
     }//GEN-LAST:event_lbl84MouseClicked
 
     private void lbl85MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl85MouseClicked
-        // TODO add your handling code here:
+        tentarJogada(8, 5, lbl85);
     }//GEN-LAST:event_lbl85MouseClicked
 
 
@@ -2009,4 +2009,16 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
     public void setLbl85(javax.swing.JLabel lbl85) {
         this.lbl85 = lbl85;
     }
+
+    public JogoMemoriaCtrl getControle() {
+        return controle;
+    }
+
+    /**
+     * @param controle the controle to set
+     */
+    public void setControle(JogoMemoriaCtrl controle) {
+        this.controle = controle;
+    }
+
 }

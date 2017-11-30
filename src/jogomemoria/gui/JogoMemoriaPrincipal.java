@@ -19,7 +19,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         controle = new JogoMemoriaCtrl();
         jpf = new JogoMemoria_Iniciante(controle);
         jpi = new JogoMemoria_Intermediario(controle);
-       // jpd = new JogoMemoria_Dificil(controle);
+        jpd = new JogoMemoria_Dificil(controle);
 
     }
 
@@ -204,6 +204,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         }
         if (controle.DIFICIL == nivel) {
             tb.getsppTabuleiro().setLeftComponent(jpd);
+            jpd.mostrar(inicioJogo);
         }
 
         sppPrincipal.setRightComponent(tb);
