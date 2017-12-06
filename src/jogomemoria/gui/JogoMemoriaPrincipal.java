@@ -166,17 +166,19 @@ public class JogoMemoriaPrincipal extends JFrame {
     private void btn_IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IniciarActionPerformed
         String item = (String) cmb_niveis.getSelectedItem();
         int nivelSelect = 0;
-          
+
         //Sound.FIMDEJOGO.play();
         if (item.equals("Facil")) {
             nivelSelect = controle.FACIL;
-            this.setSize(900, 800);
+            this.setSize(1000, 1000);
         }
         if (item.equals("Intermediario")) {
             nivelSelect = controle.INTERMEDIARIO;
+            this.setSize(1500, 1500);
         }
         if (item.equals("Dificil")) {
             nivelSelect = controle.DIFICIL;
+            this.setSize(1700, 1700);
         }
         int tempoLimite = (((Integer) spn_tempo.getValue()).intValue());
         sppPrincipal.setRightComponent(tb);
@@ -187,10 +189,12 @@ public class JogoMemoriaPrincipal extends JFrame {
         if (resp == JOptionPane.YES_OPTION) {
             mostrarTabuleiro(false);
             Sound.ABERTURA.play();
+        } else if (resp == JOptionPane.NO_OPTION) {
+            mostrarTabuleiro(true);
+            controle.setJogoIniciado(false);
+            System.exit(0);
         }
-
     }//GEN-LAST:event_btn_IniciarActionPerformed
-   
 
     public void mostrarTabuleiro(boolean inicioJogo) {
 

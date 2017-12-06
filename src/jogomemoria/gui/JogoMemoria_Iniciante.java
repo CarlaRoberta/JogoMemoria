@@ -23,6 +23,9 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
     PecaTabuleiro ptSel1; //1ª Peca de tabuleiro selecionada em cada jogada
     PecaTabuleiro ptSel2; //2ª Peca de tabuleiro selecionada em cada jogada
     int pecasSelecionadas = 0; //Qtde de pecas de tabuleiro selecionadas num dado momento
+    int pecasviradas = 0;
+    int numeroacertos = 0;
+    int numeroaerro = 0;
 
     public JogoMemoria_Iniciante(JogoMemoriaCtrl ctrl) {
         initComponents();
@@ -180,31 +183,27 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             int result = controle.realizarJogada(ptSel1, ptSel2);
             if (result == controle.JOGADA_CERTA) {
                 Sound.CERTO.play();
-                JOptionPane.showMessageDialog(this, "", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
-
+                //   JOptionPane.showMessageDialog(this, "", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                pecasviradas++;
+                pecasSelecionadas++;
+                numeroacertos++;
             } else if (result == controle.JOGADA_ERRADA) {
                 Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                numeroaerro++;
             } else if (result == controle.JOGADA_INVALIDA) {
                 Sound.ERRO.play();
+                numeroaerro++;
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+            }
+            if (pecasviradas >= 8) {
+                JOptionPane.showMessageDialog(this, "Sua Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro, "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+                controle.setJogoIniciado(false);
             }
             pecasSelecionadas = 0;
             mostrar(false);
         }
 
-    }
-
-    private void pontos(int linha, int coluna) {
-        PecaTabuleiro pt[][] = controle.getTabuleiro();
-        int jogada = controle.realizarJogada(ptSel1, ptSel2);
-        ptSel2 = pt[linha][coluna];
-        ptSel1 = pt[linha][coluna];
-        int pontuacaoAtual = 0;
-        while (jogada == controle.JOGADA_CERTA) {
-            pontuacaoAtual = pontuacaoAtual + 1;
-        }
-        JOptionPane.showInternalMessageDialog(this, pontuacaoAtual);
     }
 
     /**
