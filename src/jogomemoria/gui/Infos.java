@@ -27,6 +27,7 @@ public class Infos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jLimgOuro = new javax.swing.JLabel();
         jLimgPrata = new javax.swing.JLabel();
         jLimgDourado = new javax.swing.JLabel();
@@ -35,7 +36,7 @@ public class Infos extends javax.swing.JPanel {
         jLlbPrata = new javax.swing.JLabel();
         jLlbBronze = new javax.swing.JLabel();
         jLblPontos = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLlbAtual = new javax.swing.JLabel();
 
         jLimgOuro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/ouro.jpg"))); // NOI18N
 
@@ -46,16 +47,16 @@ public class Infos extends javax.swing.JPanel {
         jLlblRecordes.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLlblRecordes.setText("Recordes");
 
-        jLlbOuro.setText("jLabel2");
+        jLlbOuro.setText("0");
 
-        jLlbPrata.setText("jLabel3");
+        jLlbPrata.setText("0");
 
-        jLlbBronze.setText("jLabel4");
+        jLlbBronze.setText("0");
 
         jLblPontos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLblPontos.setText("Pontos da Partida");
 
-        jLabel9.setText("jLabel9");
+        jLlbAtual.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -80,7 +81,9 @@ public class Infos extends javax.swing.JPanel {
                                     .addComponent(jLlbOuro)
                                     .addComponent(jLlbPrata)
                                     .addComponent(jLlbBronze)))
-                            .addComponent(jLabel9))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(jLlbAtual)))))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -111,22 +114,23 @@ public class Infos extends javax.swing.JPanel {
                         .addComponent(jLlbBronze)))
                 .addGap(40, 40, 40)
                 .addComponent(jLblPontos)
-                .addGap(34, 34, 34)
-                .addComponent(jLabel9)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLlbAtual)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLblPontos;
     private javax.swing.JLabel jLimgDourado;
     private javax.swing.JLabel jLimgOuro;
     private javax.swing.JLabel jLimgPrata;
+    private javax.swing.JLabel jLlbAtual;
     private javax.swing.JLabel jLlbBronze;
     private javax.swing.JLabel jLlbOuro;
     private javax.swing.JLabel jLlbPrata;
     private javax.swing.JLabel jLlblRecordes;
+    private javax.swing.JScrollBar jScrollBar1;
     // End of variables declaration//GEN-END:variables
 }

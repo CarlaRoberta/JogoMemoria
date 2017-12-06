@@ -26,7 +26,8 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
     int pecasviradas = 0;
     int numeroacertos = 0;
     int numeroaerro = 0;
-
+    int pontos = 0;
+    
     public JogoMemoria_Iniciante(JogoMemoriaCtrl ctrl) {
         initComponents();
         controle = ctrl;
@@ -197,9 +198,11 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
             if (pecasviradas >= 8) {
-                JOptionPane.showMessageDialog(this, "Sua Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro, "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+                pontos= (numeroacertos *100)/numeroaerro;
+                JOptionPane.showMessageDialog(this, "Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro+" No total de pontos:"+ pontos, "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
                 controle.setJogoIniciado(false);
             }
+            
             pecasSelecionadas = 0;
             mostrar(false);
         }
