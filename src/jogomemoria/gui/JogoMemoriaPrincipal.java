@@ -101,7 +101,7 @@ public class JogoMemoriaPrincipal extends JFrame {
 
         sppPrincipal.setLeftComponent(pnl_Principal);
 
-        jogo.setBackground(new java.awt.Color(204, 204, 204));
+        jogo.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/logoo.jpg"))); // NOI18N
 
@@ -111,6 +111,10 @@ public class JogoMemoriaPrincipal extends JFrame {
         lbl_titulo.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         lbl_titulo.setForeground(new java.awt.Color(51, 153, 255));
         lbl_titulo.setText("Jogo da Memória");
+
+        jogo.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jogo.setLayer(lbl_subtitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jogo.setLayer(lbl_titulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jogoLayout = new javax.swing.GroupLayout(jogo);
         jogo.setLayout(jogoLayout);
@@ -138,9 +142,6 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(166, Short.MAX_VALUE))
         );
-        jogo.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jogo.setLayer(lbl_subtitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jogo.setLayer(lbl_titulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout pnl_principal2Layout = new javax.swing.GroupLayout(pnl_principal2);
         pnl_principal2.setLayout(pnl_principal2Layout);

@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -171,7 +171,7 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
         int idImg = pt[linha][coluna].getIdImagem();
         ImageIcon img = new ImageIcon(getClass().getResource("/jogomemoria/gui/img/jm" + idImg + ".jpg"));
         rotuloImagem.setIcon(img);
-
+        int pontuacao = 0;
         if (pecasSelecionadas == 0) {
             ptSel1 = pt[linha][coluna];
             pecasSelecionadas++;
@@ -180,7 +180,8 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             int result = controle.realizarJogada(ptSel1, ptSel2);
             if (result == controle.JOGADA_CERTA) {
                 Sound.CERTO.play();
-                JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+
             } else if (result == controle.JOGADA_ERRADA) {
                 Sound.ERRO.play();
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
@@ -192,6 +193,18 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             mostrar(false);
         }
 
+    }
+
+    private void pontos(int linha, int coluna) {
+        PecaTabuleiro pt[][] = controle.getTabuleiro();
+        int jogada = controle.realizarJogada(ptSel1, ptSel2);
+        ptSel2 = pt[linha][coluna];
+        ptSel1 = pt[linha][coluna];
+        int pontuacaoAtual = 0;
+        while (jogada == controle.JOGADA_CERTA) {
+            pontuacaoAtual = pontuacaoAtual + 1;
+        }
+        JOptionPane.showInternalMessageDialog(this, pontuacaoAtual);
     }
 
     /**
