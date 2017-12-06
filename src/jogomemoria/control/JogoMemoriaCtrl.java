@@ -247,6 +247,7 @@ public class JogoMemoriaCtrl {
             }
         }
     }
+
     /*
      ATIVIDADE #4.
      - Limpe o tabuleiro da partida pois ele pode conter dados de
@@ -299,8 +300,10 @@ public class JogoMemoriaCtrl {
         if (pt1.getIdImagem() == pt2.getIdImagem()) {
             if ((pt1.getLinha() <= linhaMax) && (pt1.getColuna() <= colunaMax)
                     && (pt2.getLinha() <= linhaMax) && (pt2.getColuna() <= colunaMax)) {
-                if ((!pt1.isVirado()) && (!pt2.isVirado()) && //Se nenhuma das duas peças estao marcadas como virada no controle (já jogadas)
-                        pt1.getIdImagem() == pt2.getIdImagem() && //Se as imagens são iguais (mas pode ser igual se usuario clicou duas vezes na mesma celula
+                if ((!pt1.isVirado()) && (!pt2.isVirado())
+                        && //Se nenhuma das duas peças estao marcadas como virada no controle (já jogadas)
+                        pt1.getIdImagem() == pt2.getIdImagem()
+                        && //Se as imagens são iguais (mas pode ser igual se usuario clicou duas vezes na mesma celula
                         (pt1.getLinha()) != pt2.getLinha() || pt1.getColuna() != pt2.getColuna()) {  //Garante que a jogada comnsidera duas celulas diferente
                     resultado = JOGADA_CERTA;
                     setPontuacaoAtual(getPontuacaoAtual() + 1);
@@ -368,6 +371,15 @@ public class JogoMemoriaCtrl {
         }
         return resultado;
     }
+    
+
+    public void pararJogada() {
+        limparTabuleiro();
+        limparImgsPartida();
+        setJogoIniciado(false);
+        setPontuacaoAtual(0);
+        System.exit(FACIL);
+    }
 
     /**
      * @return the qtdePecasPorImg
@@ -422,19 +434,6 @@ public class JogoMemoriaCtrl {
      * @param pontuacaoAtual the pontuacaoAtual to set
      */
     public void setPontuacaoAtual(int pontuacaoAtual) {
-        this.pontuacaoAtual = pontuacaoAtual;
-        if (pontuacaoAtual >= OURO) {
-            tabRecordes[getNivelAtual()][OURO] = pontuacaoAtual;
-        } else {
-            if (pontuacaoAtual >= PRATA) {
-                tabRecordes[getNivelAtual()][PRATA] = pontuacaoAtual;
-            } else {
-                if (pontuacaoAtual >= BRONZE) {
-                    tabRecordes[getNivelAtual()][BRONZE] = pontuacaoAtual;
-                }
-            }
-        }
-
     }
 
     /**

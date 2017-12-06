@@ -37,6 +37,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         btn_Iniciar = new javax.swing.JButton();
         cmb_niveis = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
         pnl_principal2 = new javax.swing.JPanel();
         jogo = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
@@ -50,6 +51,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         sppPrincipal.setDividerLocation(45);
         sppPrincipal.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
+        pnl_Principal.setBackground(new java.awt.Color(204, 204, 204));
         pnl_Principal.setToolTipText("");
         pnl_Principal.setFocusable(false);
         pnl_Principal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -58,7 +60,7 @@ public class JogoMemoriaPrincipal extends JFrame {
         lbl_Tempo.setText("Tempo Limite:");
 
         btn_Iniciar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btn_Iniciar.setText("Iniciar");
+        btn_Iniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/vai.png"))); // NOI18N
         btn_Iniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_IniciarActionPerformed(evt);
@@ -70,6 +72,17 @@ public class JogoMemoriaPrincipal extends JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Niveis");
 
+        jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogomemoria/gui/img/pare.png"))); // NOI18N
+        jToggleButton1.setMaximumSize(new java.awt.Dimension(67, 43));
+        jToggleButton1.setMinimumSize(new java.awt.Dimension(67, 43));
+        jToggleButton1.setPreferredSize(new java.awt.Dimension(67, 43));
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnl_PrincipalLayout = new javax.swing.GroupLayout(pnl_Principal);
         pnl_Principal.setLayout(pnl_PrincipalLayout);
         pnl_PrincipalLayout.setHorizontalGroup(
@@ -79,23 +92,30 @@ public class JogoMemoriaPrincipal extends JFrame {
                 .addComponent(lbl_Tempo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(spn_tempo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btn_Iniciar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_Iniciar))
+                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_PrincipalLayout.setVerticalGroup(
             pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_PrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_Tempo)
-                    .addComponent(spn_tempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_Iniciar)
-                    .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addGroup(pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_PrincipalLayout.createSequentialGroup()
+                        .addComponent(btn_Iniciar)
+                        .addGap(11, 11, 11))
+                    .addGroup(pnl_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_Tempo)
+                        .addComponent(spn_tempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmb_niveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -121,22 +141,23 @@ public class JogoMemoriaPrincipal extends JFrame {
         jogoLayout.setHorizontalGroup(
             jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jogoLayout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
-                .addComponent(lbl_titulo)
-                .addGap(84, 84, 84))
-            .addGroup(jogoLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
                 .addGroup(jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_subtitulo))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jogoLayout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addGroup(jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_subtitulo)))
+                    .addGroup(jogoLayout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(lbl_titulo)))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         jogoLayout.setVerticalGroup(
             jogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jogoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbl_titulo)
                 .addGap(18, 18, 18)
+                .addComponent(lbl_titulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbl_subtitulo)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,6 +217,12 @@ public class JogoMemoriaPrincipal extends JFrame {
         }
     }//GEN-LAST:event_btn_IniciarActionPerformed
 
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        sppPrincipal.setRightComponent(pnl_principal2);
+        controle.pararJogada();
+        Sound.FIMDEJOGO.play();
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
     public void mostrarTabuleiro(boolean inicioJogo) {
 
         PecaTabuleiro pctb[][] = controle.getTabuleiro();
@@ -239,6 +266,7 @@ public class JogoMemoriaPrincipal extends JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JDesktopPane jogo;
     private javax.swing.JLabel lbl_Tempo;
     private javax.swing.JLabel lbl_subtitulo;

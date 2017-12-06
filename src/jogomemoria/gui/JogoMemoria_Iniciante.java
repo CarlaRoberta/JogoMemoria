@@ -198,6 +198,7 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
             }
             if (pecasviradas >= 8) {
+                Sound.FIMDEJOGO.play();
                 pontos= (numeroacertos *100)/numeroaerro;
                 JOptionPane.showMessageDialog(this, "Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro+" No total de pontos:"+ pontos, "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
                 controle.setJogoIniciado(false);
