@@ -68,10 +68,6 @@ public class JogoMemoriaCtrl {
         acertosPartida = INDEFINIDO;
         nivelAtual = INDEFINIDO;
         pontuacaoAtual = 0;
-        int recordeFacil = 0;
-        int recordeIntermediario = 0;
-        int recordeDificil = 0;
-
         qtdImgsPartida = INDEFINIDO;
         /*ATIVIDADE #1 - Implementar um construtor para esta classe. Ele deve
          iniciar todos os atributos pertinentes, da seguinte forma:
@@ -123,6 +119,7 @@ public class JogoMemoriaCtrl {
         sortearImagensPartida();
 
         preencherTabuleiro(nivel);
+        
 
     }
 

@@ -9,18 +9,23 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
+import jogomemoria.gui.JogoMemoriaPrincipal;
 import jogomemoria.gui.msc.Sound;
 import jogomemoria.model.PecaTabuleiro;
 
 public class JogoMemoria_Dificil extends javax.swing.JPanel {
 
     private JogoMemoriaCtrl controle;
+    private JogoMemoriaPrincipal principal;
 
     PecaTabuleiro ptSel1; //1ª Peca de tabuleiro selecionada em cada jogada
     PecaTabuleiro ptSel2; //2ª Peca de tabuleiro selecionada em cada jogada
     PecaTabuleiro ptSel3; //3ª Peca de tabuleiro selecionada em cada jogada
-
     int pecasSelecionadas = 0; //Qtde de pecas de tabuleiro selecionadas num dado momento
+    int pecasviradas = 0;
+    int numeroacertos = 0;
+    int numeroaerro = 0;
+    int pontos = 0;
 
     public JogoMemoria_Dificil(JogoMemoriaCtrl ctrl) {
         initComponents();
@@ -482,13 +487,24 @@ public class JogoMemoria_Dificil extends javax.swing.JPanel {
             int result = controle.realizarJogada(ptSel1, ptSel2, ptSel3);
             if (result == controle.JOGADA_CERTA) {
                 Sound.CERTO.play();
-                JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                // JOptionPane.showMessageDialog(this, "Muito bem!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                pecasviradas++;
+                numeroacertos++;
+
             } else if (result == controle.JOGADA_ERRADA) {
                 Sound.ERRO.play();
+                numeroaerro++;
                 JOptionPane.showMessageDialog(this, "Puts não deu. tente de novo!!!", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
             } else if (result == controle.JOGADA_INVALIDA) {
                 Sound.ERRO.play();
+                numeroaerro++;
                 JOptionPane.showMessageDialog(this, "Ô meu, se liga!!!", "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+            }
+            if (pecasviradas >= 8) {
+                Sound.FIMDEJOGO.play();
+                pontos = (numeroacertos * 100) / numeroaerro;
+                JOptionPane.showMessageDialog(this, "Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro + " No total de pontos:" + pontos, "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
+                controle.setJogoIniciado(false);
             }
             pecasSelecionadas = 0;
             mostrar(false);

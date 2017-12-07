@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import jogomemoria.control.JogoMemoriaCtrl;
 import jogomemoria.gui.msc.Sound;
+import jogomemoria.gui.JogoMemoriaPrincipal;
 import jogomemoria.model.PecaTabuleiro;
 
 /**
@@ -19,6 +20,8 @@ import jogomemoria.model.PecaTabuleiro;
 public class JogoMemoria_Iniciante extends javax.swing.JPanel {
 
     private JogoMemoriaCtrl controle;
+    private JogoMemoriaPrincipal principal;
+
 
     PecaTabuleiro ptSel1; //1ª Peca de tabuleiro selecionada em cada jogada
     PecaTabuleiro ptSel2; //2ª Peca de tabuleiro selecionada em cada jogada
@@ -186,7 +189,6 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
                 Sound.CERTO.play();
                 //   JOptionPane.showMessageDialog(this, "", "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
                 pecasviradas++;
-                pecasSelecionadas++;
                 numeroacertos++;
             } else if (result == controle.JOGADA_ERRADA) {
                 Sound.ERRO.play();
@@ -199,8 +201,8 @@ public class JogoMemoria_Iniciante extends javax.swing.JPanel {
             }
             if (pecasviradas >= 8) {
                 Sound.FIMDEJOGO.play();
-                pontos= (numeroacertos *100)/numeroaerro;
-                JOptionPane.showMessageDialog(this, "Acertos no jogo foi de: " + numeroacertos + " Número de Erros: " + numeroaerro+" No total de pontos:"+ pontos, "Resultado da jogada", JOptionPane.ERROR_MESSAGE);
+                pontos= (numeroacertos *100)/numeroaerro;                
+                JOptionPane.showMessageDialog(this, "Acertos no jogo foi de: " + numeroacertos + "  Número de Erros: " + numeroaerro+" No total de pontos:"+ pontos, "Resultado da jogada", JOptionPane.INFORMATION_MESSAGE);
                 controle.setJogoIniciado(false);
             }
             
